@@ -133,7 +133,13 @@ const Board = () => {
             return {
                 ...item,
                 background: finalBackground,
-                logo: finalLogo
+                logo: finalLogo,
+                // Merge additional metadata if available from fetched meta details
+                releaseInfo: metaData?.releaseInfo || item.releaseInfo,
+                runtime: metaData?.runtime || item.runtime,
+                description: metaData?.description || item.description,
+                links: metaData?.links || item.links,
+                trailerStreams: metaData?.trailerStreams || item.trailerStreams
             };
         });
     }, [heroItems, heroMetaDataMap]);

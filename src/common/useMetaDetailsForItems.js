@@ -234,7 +234,12 @@ const useMetaDetailsForItems = (items, maxItems = 5) => {
                                 const metaItem = state.metaItem.content.content;
                                 resolve({
                                     background: metaItem.background || null,
-                                    logo: metaItem.logo || null
+                                    logo: metaItem.logo || null,
+                                    releaseInfo: metaItem.releaseInfo || null,
+                                    runtime: metaItem.runtime || null,
+                                    description: metaItem.description || null,
+                                    links: Array.isArray(metaItem.links) ? metaItem.links : null,
+                                    trailerStreams: Array.isArray(metaItem.trailerStreams) ? metaItem.trailerStreams : null
                                 });
                                 resolved = true;
                                 return;
