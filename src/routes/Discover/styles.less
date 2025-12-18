@@ -71,57 +71,27 @@
                     }
                 }
 
-                .inline-advanced-filters {
-                    display: contents;
-                }
-
                 .filter-container {
-                    display: none;
-                    flex: 0 0 auto;
+                    display: flex;
+                    flex: 1 0 5rem;
                     justify-content: flex-end;
 
                     .filter-button {
                         flex: none;
-                        display: flex;
+                        display: none;
                         align-items: center;
                         justify-content: center;
-                        gap: 0.5rem;
+                        width: 3rem;
                         height: 3rem;
-                        padding: 0 1rem;
                         margin-left: 1.5rem;
                         border-radius: var(--border-radius);
                         background-color: var(--overlay-color);
 
                         .filter-icon {
                             flex: none;
-                            width: 1.2rem;
-                            height: 1.2rem;
+                            width: 1.4rem;
+                            height: 1.4rem;
                             color: var(--primary-foreground-color);
-                        }
-
-                        .filter-label {
-                            font-size: 0.9rem;
-                            font-weight: 500;
-                            color: var(--primary-foreground-color);
-                        }
-
-                        .filter-count {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            min-width: 1.25rem;
-                            height: 1.25rem;
-                            padding: 0 0.35rem;
-                            font-size: 0.75rem;
-                            font-weight: 600;
-                            color: var(--primary-background-color);
-                            background-color: var(--primary-accent-color);
-                            border-radius: 0.625rem;
-                        }
-
-                        &.has-active-filters {
-                            background-color: rgba(123, 91, 245, 0.15);
-                            border: 1px solid rgba(123, 91, 245, 0.4);
                         }
                     }
                 }
@@ -274,19 +244,20 @@
 .selectable-inputs-modal {
     .selectable-inputs-modal-container {
         overflow: visible;
-        width: 92%;
-        max-width: 44rem;
 
         .selectable-inputs-modal-content {
             overflow: visible !important;
-            padding: 0.5rem 0;
 
             .select-input {
                 height: 3rem;
-                display: flex;
+                display: none;
 
-                &:not(:last-child) {
-                    margin-bottom: 1rem;
+                &:nth-child(n+4) {
+                    display: flex;
+
+                    &:not(:last-child) {
+                        margin-bottom: 1rem;
+                    }
                 }
 
                 .multiselect-menu-container {
@@ -350,25 +321,11 @@
     .discover-container {
         .discover-content {
             .catalog-container {
-                .selectable-inputs-container {
-                    .inline-advanced-filters {
-                        display: none;
-                    }
-
-                    .filter-container {
-                        display: flex;
-                    }
-                }
-
                 .meta-items-container {
                     grid-template-columns: repeat(4, 1fr);
                 }
             }
         }
-    }
-
-    :global(.inline-multiselect) {
-        display: none !important;
     }
 }
 
@@ -428,14 +385,6 @@
                                 }
                             }
                         }
-                    }
-
-                    .inline-advanced-filters {
-                        display: none;
-                    }
-
-                    .filter-container {
-                        display: flex;
                     }
                 }
 
