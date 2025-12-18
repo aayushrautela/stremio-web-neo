@@ -3,6 +3,7 @@ import { Toggle } from 'stremio/components';
 import { Section, Category, Option } from '../components';
 import useDataEnrichmentOptions from './useDataEnrichmentOptions';
 import APIKeyManager from './APIKeyManager';
+import OMDBAPIKeyManager from './APIKeyManager/OMDBAPIKeyManager';
 
 type Props = {
     profile: Profile,
@@ -15,7 +16,9 @@ const DataEnrichment = forwardRef<HTMLDivElement, Props>(({ profile }: Props, re
         showTmdbDescriptionToggle,
         showMaturityRatingToggle,
         showSimilarTitlesToggle,
+        showOmdbRatingsToggle,
         refreshApiKey,
+        refreshOmdbApiKey,
     } = useDataEnrichmentOptions({ profile });
 
     return (
@@ -52,6 +55,15 @@ const DataEnrichment = forwardRef<HTMLDivElement, Props>(({ profile }: Props, re
                     <Toggle
                         tabIndex={-1}
                         {...showPosterRatingsToggle}
+                    />
+                </Option>
+            </Category>
+            <Category icon={'film'} label={'SETTINGS_SECTION_OMDB'}>
+                <OMDBAPIKeyManager onKeySavedChange={refreshOmdbApiKey} />
+                <Option label={'SETTINGS_DATA_ENRICHMENT_SHOW_OMDB_RATINGS'}>
+                    <Toggle
+                        tabIndex={-1}
+                        {...showOmdbRatingsToggle}
                     />
                 </Option>
             </Category>

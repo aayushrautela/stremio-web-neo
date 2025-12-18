@@ -116,8 +116,13 @@
             }
         }
 
-        .imdb-rating-row {
+        .ratings-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.75rem;
             margin-top: 0.5rem;
+            flex-wrap: wrap;
 
             .badge-imdb {
                 display: inline-flex;
@@ -136,6 +141,50 @@
                 }
 
                 .imdb-rating {
+                    font-size: 1rem;
+                    font-weight: 700;
+                }
+            }
+
+            .badge-rt {
+                display: inline-flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.4rem 1rem;
+                border-radius: 0.25rem;
+                background-color: #FA320A;
+                color: #FFFFFF;
+                font-weight: 600;
+
+                .rt-label {
+                    font-size: 1rem;
+                    font-weight: 700;
+                }
+
+                .rt-rating {
+                    font-size: 1rem;
+                    font-weight: 700;
+                }
+            }
+
+            .badge-mc {
+                display: inline-flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.4rem 1rem;
+                border-radius: 0.25rem;
+                background-color: #66CC33;
+                color: #000000;
+                font-weight: 600;
+
+                .mc-label {
+                    font-size: 1rem;
+                    font-weight: 700;
+                }
+
+                .mc-rating {
                     font-size: 1rem;
                     font-weight: 700;
                 }
@@ -354,12 +403,16 @@
                 }
             }
 
-            .imdb-rating-row {
-                .badge-imdb {
+            .ratings-row {
+                gap: 0.5rem;
+
+                .badge-imdb, .badge-rt, .badge-mc {
                     padding: 0.3rem 0.7rem;
                     font-size: 0.9rem;
 
-                    .imdb-label, .imdb-rating {
+                    .imdb-label, .imdb-rating,
+                    .rt-label, .rt-rating,
+                    .mc-label, .mc-rating {
                         font-size: 0.9rem;
                     }
                 }

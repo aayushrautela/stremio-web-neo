@@ -10,9 +10,10 @@ type Props = {
     onChange: (value: string) => void;
     onSubmit: () => void;
     onClear: () => void;
+    placeholder?: string;
 };
 
-const AddKeyItem = ({ value, onChange, onSubmit, onClear }: Props) => {
+const AddKeyItem = ({ value, onChange, onSubmit, onClear, placeholder = 'Enter TMDB API Key' }: Props) => {
     const handleValueChange = useCallback(({ target }: ChangeEvent<HTMLInputElement>) => {
         onChange(target.value);
     }, [onChange]);
@@ -24,7 +25,7 @@ const AddKeyItem = ({ value, onChange, onSubmit, onClear }: Props) => {
                 value={value}
                 onChange={handleValueChange}
                 onSubmit={onSubmit}
-                placeholder={'Enter TMDB API Key'}
+                placeholder={placeholder}
                 type={'password'}
             />
             <div className={styles['actions']}>

@@ -18,6 +18,7 @@ const { getTMDBApiKey, getTMDBExternalImdbId } = require('stremio/common/tmdbApi
 const useBinaryState = require('stremio/common/useBinaryState');
 const useProfile = require('stremio/common/useProfile');
 const { useDataEnrichmentPrefs } = require('stremio/common/dataEnrichmentPrefs');
+const { useOMDBData } = require('stremio/common/useOMDBData');
 const ActionButton = require('./ActionButton');
 const MetaLinks = require('./MetaLinks');
 const MetaPreviewPlaceholder = require('./MetaPreviewPlaceholder');
@@ -31,11 +32,12 @@ const ALLOWED_LINK_REDIRECTS = [
     routesRegexp.metadetails.regexp
 ];
 
-const MetaPreview = React.forwardRef(({ className, compact, name, logo, background, runtime, releaseInfo, released, description, deepLinks, links, trailerStreams, inLibrary, toggleInLibrary, ratingInfo, tmdbCast, maturityRating, tmdbCollection, tmdbCollectionParts, tmdbSimilar, tmdbType }, ref) => {
+const MetaPreview = React.forwardRef(({ className, compact, name, logo, background, runtime, releaseInfo, released, description, deepLinks, links, trailerStreams, inLibrary, toggleInLibrary, ratingInfo, tmdbCast, maturityRating, tmdbCollection, tmdbCollectionParts, tmdbSimilar, tmdbType, metaId }, ref) => {
     const { t } = useTranslation();
     const profile = useProfile();
     const [shareModalOpen, openShareModal, closeShareModal] = useBinaryState(false);
-    const { showTmdbCast, showMaturityRating, showSimilarTitles } = useDataEnrichmentPrefs();
+    const { showTmdbCast, showMaturityRating, showSimilarTitles, showOmdbRatings } = useDataEnrichmentPrefs();
+    const omdbData = useOMDBData({ id: metaId, links });
     const linksGroups = React.useMemo(() => {
         return Array.isArray(links) ?
             links
@@ -277,13 +279,27 @@ const MetaPreview = React.forwardRef(({ className, compact, name, logo, backgrou
                     )}
                 </div>
                 
-                {/* IMDb Rating on its own line */}
-                {imdbRating && (
-                    <div className={styles['imdb-rating-row']}>
-                        <div className={styles['badge-imdb']}>
-                            <span className={styles['imdb-label']}>{t('IMDB')}</span>
-                            <span className={styles['imdb-rating']}>{imdbRating}</span>
-                        </div>
+                {/* Ratings Row - IMDB, Rotten Tomatoes, Metacritic */}
+                {(imdbRating || (showOmdbRatings && omdbData.data)) && (
+                    <div className={styles['ratings-row']}>
+                        {imdbRating && (
+                            <div className={styles['badge-imdb']}>
+                                <span className={styles['imdb-label']}>{t('IMDB')}</span>
+                                <span className={styles['imdb-rating']}>{imdbRating}</span>
+                            </div>
+                        )}
+                        {showOmdbRatings && omdbData.data?.rottenTomatoes && (
+                            <div className={styles['badge-rt']}>
+                                <span className={styles['rt-label']}>RT</span>
+                                <span className={styles['rt-rating']}>{omdbData.data.rottenTomatoes}</span>
+                            </div>
+                        )}
+                        {showOmdbRatings && omdbData.data?.metacritic && (
+                            <div className={styles['badge-mc']}>
+                                <span className={styles['mc-label']}>MC</span>
+                                <span className={styles['mc-rating']}>{omdbData.data.metacritic}</span>
+                            </div>
+                        )}
                     </div>
                 )}
                 
@@ -476,6 +492,7 @@ MetaPreview.propTypes = {
     tmdbCollectionParts: PropTypes.array,
     tmdbSimilar: PropTypes.array,
     tmdbType: PropTypes.oneOf(['movie', 'tv']),
+    metaId: PropTypes.string,
 };
 
 module.exports = MetaPreview;
