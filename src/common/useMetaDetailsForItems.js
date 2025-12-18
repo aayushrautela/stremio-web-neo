@@ -190,6 +190,7 @@ const useMetaDetailsForItems = (items, maxItems = 5) => {
                     if (newMap.size > 0) {
                         setMetaDataMap(new Map(newMap));
                     }
+                    setIsLoading(false);
                 }
                 return;
             }

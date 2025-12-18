@@ -60,9 +60,6 @@ const Board = () => {
         return continueWatchingPreview?.items ?? continueWatchingPreview?.content?.content ?? [];
     }, [continueWatchingPreview]);
 
-    // Fetch meta details for first 10 items to get background and logo
-    const { metaDataMap, isLoading: isLoadingMetaDetails } = useMetaDetailsForItems(sourceItems, 10);
-
     // Identify hero items that are missing background or logo
     const heroItemsNeedingMetadata = React.useMemo(() => {
         if (!Array.isArray(heroItems) || heroItems.length === 0) {
@@ -76,8 +73,28 @@ const Board = () => {
         });
     }, [heroItems]);
 
-    // Fetch meta details for hero items missing background or logo (limit to first 15 items)
-    const { metaDataMap: heroMetaDataMap, isLoading: isLoadingHeroMetaDetails } = useMetaDetailsForItems(heroItemsNeedingMetadata, Math.min(heroItemsNeedingMetadata.length, 15));
+    // Start with 1 hero card, then load more after delay
+    const [heroMaxItems, setHeroMaxItems] = React.useState(1);
+
+    // Fetch meta details for hero items - start with 1, then load rest sequentially
+    const { metaDataMap: heroMetaDataMap, isLoading: isLoadingHeroMetaDetails } = useMetaDetailsForItems(
+        heroItemsNeedingMetadata, 
+        Math.min(heroItemsNeedingMetadata.length, heroMaxItems)
+    );
+
+    // After 3 seconds, start loading more hero items (gives continue watching time to start)
+    React.useEffect(() => {
+        if (heroItemsNeedingMetadata.length > 1 && heroMaxItems === 1) {
+            const timer = setTimeout(() => {
+                setHeroMaxItems(Math.min(heroItemsNeedingMetadata.length, 15));
+            }, 3000); // 3 second delay
+            
+            return () => clearTimeout(timer);
+        }
+    }, [heroItemsNeedingMetadata.length, heroMaxItems]);
+
+    // Fetch meta details for first 10 items to get background and logo
+    const { metaDataMap, isLoading: isLoadingMetaDetails } = useMetaDetailsForItems(sourceItems, 10);
 
     // Enhance hero items with fetched metadata
     const enhancedHeroItems = React.useMemo(() => {
