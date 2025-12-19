@@ -8,10 +8,13 @@ const { useTranslation } = require('react-i18next');
 const { default: Icon } = require('@stremio/stremio-icons/react');
 const { default: Button } = require('stremio/components/Button');
 const { default: Image } = require('stremio/components/Image');
+const MetaRow = require('stremio/components/MetaRow');
+const MetaItem = require('stremio/components/MetaItem');
 const ModalDialog = require('stremio/components/ModalDialog');
 const SharePrompt = require('stremio/components/SharePrompt');
 const CONSTANTS = require('stremio/common/CONSTANTS');
 const routesRegexp = require('stremio/common/routesRegexp');
+const { getTMDBApiKey, getTMDBExternalImdbId } = require('stremio/common/tmdbApi');
 const useBinaryState = require('stremio/common/useBinaryState');
 const useProfile = require('stremio/common/useProfile');
 const { useDataEnrichmentPrefs } = require('stremio/common/dataEnrichmentPrefs');
@@ -28,11 +31,11 @@ const ALLOWED_LINK_REDIRECTS = [
     routesRegexp.metadetails.regexp
 ];
 
-const MetaPreview = React.forwardRef(({ className, compact, name, logo, background, runtime, releaseInfo, released, description, deepLinks, links, trailerStreams, inLibrary, toggleInLibrary, ratingInfo, tmdbCast }, ref) => {
+const MetaPreview = React.forwardRef(({ className, compact, name, logo, background, runtime, releaseInfo, released, description, deepLinks, links, trailerStreams, inLibrary, toggleInLibrary, ratingInfo, tmdbCast, maturityRating, tmdbCollection, tmdbCollectionParts, tmdbSimilar, tmdbType }, ref) => {
     const { t } = useTranslation();
     const profile = useProfile();
     const [shareModalOpen, openShareModal, closeShareModal] = useBinaryState(false);
-    const { showTmdbCast } = useDataEnrichmentPrefs();
+    const { showTmdbCast, showMaturityRating, showSimilarTitles } = useDataEnrichmentPrefs();
     const linksGroups = React.useMemo(() => {
         return Array.isArray(links) ?
             links
@@ -175,6 +178,57 @@ const MetaPreview = React.forwardRef(({ className, compact, name, logo, backgrou
 
         return trailerStreams[0].deepLinks.player;
     }, [trailerStreams]);
+
+    const tmdbImdbCacheRef = React.useRef(new Map());
+    const openTmdbEntity = React.useCallback(async (type, tmdbId) => {
+        const cacheKey = `${type}:${tmdbId}`;
+        const cached = tmdbImdbCacheRef.current.get(cacheKey);
+        if (cached) {
+            window.location.hash = `#/detail/${type}/${cached}`;
+            return;
+        }
+
+        const apiKey = getTMDBApiKey();
+        if (!apiKey) return;
+
+        const tmdbApiType = type === 'series' ? 'tv' : type;
+        const imdbId = await getTMDBExternalImdbId(tmdbId, tmdbApiType, apiKey);
+        if (!imdbId) return;
+
+        tmdbImdbCacheRef.current.set(cacheKey, imdbId);
+        window.location.hash = `#/detail/${type}/${imdbId}`;
+    }, []);
+
+    const toPosterUrl = React.useCallback((posterPath, backdropPath) => {
+        return posterPath ? `https://image.tmdb.org/t/p/w342${posterPath}` : (backdropPath ? `https://image.tmdb.org/t/p/w780${backdropPath}` : '');
+    }, []);
+
+    const makeShelfItems = React.useCallback((items, type, getName) => {
+        if (!Array.isArray(items) || items.length === 0) return null;
+        return items
+            .filter((it) => it && typeof it.id === 'number')
+            .map((it) => ({
+                type,
+                name: getName(it),
+                poster: toPosterUrl(it.poster_path, it.backdrop_path),
+                posterShape: 'poster',
+                onClick: (event) => {
+                    event.preventDefault();
+                    openTmdbEntity(type, it.id);
+                },
+            }));
+    }, [openTmdbEntity, toPosterUrl]);
+
+    const collectionShelfItems = React.useMemo(() => {
+        if (!showSimilarTitles || !tmdbCollection || !Array.isArray(tmdbCollectionParts) || tmdbCollectionParts.length === 0) return null;
+        return makeShelfItems(tmdbCollectionParts.slice(0, 20), 'movie', (p) => p.title);
+    }, [showSimilarTitles, tmdbCollection, tmdbCollectionParts, makeShelfItems]);
+
+    const similarShelfItems = React.useMemo(() => {
+        if (!showSimilarTitles || !Array.isArray(tmdbSimilar) || tmdbSimilar.length === 0) return null;
+        const type = tmdbType === 'tv' ? 'series' : 'movie';
+        return makeShelfItems(tmdbSimilar.slice(0, 20), type, (it) => (type === 'series' ? it.name : it.title));
+    }, [showSimilarTitles, tmdbSimilar, tmdbType, makeShelfItems]);
     const renderLogoFallback = React.useCallback(() => (
         <div className={styles['logo-placeholder']}>{name}</div>
     ), [name]);
@@ -218,6 +272,12 @@ const MetaPreview = React.forwardRef(({ className, compact, name, logo, backgrou
                             <div className={styles['metadata-item']}>{runtime}</div>
                         </>
                     )}
+                    {showMaturityRating && maturityRating && (
+                        <>
+                            <div className={styles['metadata-separator']}>•</div>
+                            <div className={styles['metadata-item']}>{maturityRating}</div>
+                        </>
+                    )}
                 </div>
                 
                 {/* IMDb Rating on its own line */}
@@ -232,6 +292,13 @@ const MetaPreview = React.forwardRef(({ className, compact, name, logo, backgrou
                             <span className={styles['imdb-label']}>{t('IMDB')}</span>
                             <span className={styles['imdb-rating']}>{imdbLink.rating}</span>
                         </Button>
+                    </div>
+                )}
+                
+                {/* Synopsis */}
+                {typeof description === 'string' && description.length > 0 && (
+                    <div className={styles['synopsis']}>
+                        {description}
                     </div>
                 )}
                 
@@ -287,13 +354,6 @@ const MetaPreview = React.forwardRef(({ className, compact, name, logo, backgrou
                     )}
                 </div>
                 
-                {/* Synopsis */}
-                {typeof description === 'string' && description.length > 0 && (
-                    <div className={styles['synopsis']}>
-                        {description}
-                    </div>
-                )}
-                
                 {/* Director */}
                 {directorLinks.length > 0 && (
                     <div className={styles['crew-section']}>
@@ -320,12 +380,11 @@ const MetaPreview = React.forwardRef(({ className, compact, name, logo, backgrou
                 )}
                 
                 {/* Cast */}
-                {showTmdbCast && (
-                    tmdbCast && tmdbCast.length > 0 ? (
+                {castLinks.length > 0 && (
+                    showTmdbCast && tmdbCast && tmdbCast.length > 0 ? (
                         <Cast cast={tmdbCast} />
                     ) : (
-                        castLinks.length > 0 && (
-                            <div className={styles['crew-section']}>
+                            <div className={classnames(styles['crew-section'], styles['cast-section-fallback'])}>
                                 <div className={styles['crew-label']}>{t('CAST')}</div>
                                 <div className={styles['crew-pills']}>
                                     {castLinks.slice(0, 10).map((link, index) => (
@@ -346,7 +405,6 @@ const MetaPreview = React.forwardRef(({ className, compact, name, logo, backgrou
                                     ))}
                                 </div>
                             </div>
-                        )
                     )
                 )}
                 
@@ -372,6 +430,22 @@ const MetaPreview = React.forwardRef(({ className, compact, name, logo, backgrou
                             links={linksGroups.get(category)}
                         />
                     ))}
+
+                {collectionShelfItems && (
+                    <MetaRow
+                        title={tmdbCollection.name}
+                        catalog={{ items: collectionShelfItems }}
+                        itemComponent={MetaItem}
+                    />
+                )}
+
+                {similarShelfItems && (
+                    <MetaRow
+                        title={t('SIMILAR_TITLES')}
+                        catalog={{ items: similarShelfItems }}
+                        itemComponent={MetaItem}
+                    />
+                )}
                 
             </div>
         </div>
@@ -405,6 +479,11 @@ MetaPreview.propTypes = {
     toggleInLibrary: PropTypes.func,
     ratingInfo: PropTypes.object,
     tmdbCast: PropTypes.array,
+    maturityRating: PropTypes.string,
+    tmdbCollection: PropTypes.object,
+    tmdbCollectionParts: PropTypes.array,
+    tmdbSimilar: PropTypes.array,
+    tmdbType: PropTypes.oneOf(['movie', 'tv']),
 };
 
 module.exports = MetaPreview;

@@ -90,7 +90,7 @@
         }
 
         .dismiss-icon-layer {
-            z-index: -2;
+            z-index: 1;
             position: absolute;
             top: 0.5rem;
             left: 0.5rem;
@@ -102,6 +102,7 @@
             border-radius: 100%;
             opacity: 0;
             transition: opacity 0.1s ease-in;
+            pointer-events: auto;
 
             .dismiss-icon {
                 z-index: 1;
@@ -497,12 +498,812 @@
     }
 }
 
+// Large screen breakpoints (4K displays)
+@media only screen and (min-width: @large) {
+    .meta-item-container {
+        padding: 0.81rem;
+
+        .poster-container {
+            .dismiss-icon-layer {
+                top: 0.58rem;
+                left: 0.58rem;
+                height: 1.73rem;
+                width: 1.73rem;
+
+                .dismiss-icon {
+                    height: 1.44rem;
+                    width: 1.44rem;
+                }
+            }
+
+            .watched-icon-layer {
+                width: 1.73rem;
+                height: 1.73rem;
+                margin: 0.58rem;
+            }
+
+            .watched-icon {
+                width: 0.86rem;
+                height: 0.86rem;
+            }
+
+            .logo-image-layer {
+                padding: 1.15rem;
+
+                .logo-placeholder {
+                    font-size: 1.73rem;
+                }
+            }
+
+            .title-overlay-layer {
+                padding: 1.15rem;
+
+                .title-overlay {
+                    font-size: 2.07rem;
+                }
+            }
+
+            .play-icon-layer {
+                height: 4.6rem;
+                width: 4.6rem;
+
+                .play-icon {
+                    height: 2.59rem;
+                    width: 2.59rem;
+                }
+            }
+
+            .progress-bar-layer {
+                bottom: 1.15rem;
+                left: 1.15rem;
+                right: 1.15rem;
+                height: 0.52rem;
+                border-radius: 0.52rem;
+            }
+
+            .new-videos {
+                .layer {
+                    height: 1.44rem;
+                    width: 2.59rem;
+                    border-radius: 0.29rem;
+
+                    &:nth-child(1) {
+                        top: 0.58rem;
+                        right: 0.58rem;
+                    }
+
+                    &:nth-child(2) {
+                        top: 0.86rem;
+                        right: 0.86rem;
+                    }
+
+                    &:nth-child(3) {
+                        top: 1.15rem;
+                        right: 1.15rem;
+                    }
+
+                    .icon {
+                        height: 0.92rem;
+                        width: 0.92rem;
+                    }
+
+                    .label {
+                        font-size: 0.92rem;
+                    }
+                }
+            }
+
+            .rating-badge {
+                bottom: 0.58rem;
+                right: 0.58rem;
+                gap: 0.46rem;
+                padding: 0.46rem 0.92rem;
+                border-radius: var(--border-radius);
+
+                .rating-icon {
+                    height: 1.38rem;
+                    width: 1.38rem;
+                }
+
+                .rating-value {
+                    font-size: 1.32rem;
+                }
+            }
+        }
+
+        .title-bar-container {
+            height: 4.6rem;
+
+            .title-label {
+                padding-left: 1.73rem;
+
+                &:only-child {
+                    padding: 0 0.58rem;
+                }
+            }
+
+            .menu-label-container {
+                width: 1.73rem;
+                height: 4.6rem;
+                padding: 1.15rem 0;
+                transform: translateX(1.15rem);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: @xlarge) {
+    .meta-item-container {
+        padding: 0.88rem;
+
+        .poster-container {
+            .dismiss-icon-layer {
+                top: 0.63rem;
+                left: 0.63rem;
+                height: 1.88rem;
+                width: 1.88rem;
+
+                .dismiss-icon {
+                    height: 1.56rem;
+                    width: 1.56rem;
+                }
+            }
+
+            .watched-icon-layer {
+                width: 1.88rem;
+                height: 1.88rem;
+                margin: 0.63rem;
+            }
+
+            .watched-icon {
+                width: 0.94rem;
+                height: 0.94rem;
+            }
+
+            .logo-image-layer {
+                padding: 1.25rem;
+
+                .logo-placeholder {
+                    font-size: 1.88rem;
+                }
+            }
+
+            .title-overlay-layer {
+                padding: 1.25rem;
+
+                .title-overlay {
+                    font-size: 2.25rem;
+                }
+            }
+
+            .play-icon-layer {
+                height: 5rem;
+                width: 5rem;
+
+                .play-icon {
+                    height: 2.81rem;
+                    width: 2.81rem;
+                }
+            }
+
+            .progress-bar-layer {
+                bottom: 1.25rem;
+                left: 1.25rem;
+                right: 1.25rem;
+                height: 0.56rem;
+                border-radius: 0.56rem;
+            }
+
+            .new-videos {
+                .layer {
+                    height: 1.56rem;
+                    width: 2.81rem;
+                    border-radius: 0.31rem;
+
+                    &:nth-child(1) {
+                        top: 0.63rem;
+                        right: 0.63rem;
+                    }
+
+                    &:nth-child(2) {
+                        top: 0.94rem;
+                        right: 0.94rem;
+                    }
+
+                    &:nth-child(3) {
+                        top: 1.25rem;
+                        right: 1.25rem;
+                    }
+
+                    .icon {
+                        height: 1rem;
+                        width: 1rem;
+                    }
+
+                    .label {
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .rating-badge {
+                bottom: 0.63rem;
+                right: 0.63rem;
+                gap: 0.5rem;
+                padding: 0.5rem 1rem;
+                border-radius: var(--border-radius);
+
+                .rating-icon {
+                    height: 1.5rem;
+                    width: 1.5rem;
+                }
+
+                .rating-value {
+                    font-size: 1.44rem;
+                }
+            }
+        }
+
+        .title-bar-container {
+            height: 5rem;
+
+            .title-label {
+                padding-left: 1.88rem;
+
+                &:only-child {
+                    padding: 0 0.63rem;
+                }
+            }
+
+            .menu-label-container {
+                width: 1.88rem;
+                height: 5rem;
+                padding: 1.25rem 0;
+                transform: translateX(1.25rem);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: @xxlarge) {
+    .meta-item-container {
+        padding: 0.95rem;
+
+        .poster-container {
+            .dismiss-icon-layer {
+                top: 0.68rem;
+                left: 0.68rem;
+                height: 2.03rem;
+                width: 2.03rem;
+
+                .dismiss-icon {
+                    height: 1.69rem;
+                    width: 1.69rem;
+                }
+            }
+
+            .watched-icon-layer {
+                width: 2.03rem;
+                height: 2.03rem;
+                margin: 0.68rem;
+            }
+
+            .watched-icon {
+                width: 1.01rem;
+                height: 1.01rem;
+            }
+
+            .logo-image-layer {
+                padding: 1.35rem;
+
+                .logo-placeholder {
+                    font-size: 2.03rem;
+                }
+            }
+
+            .title-overlay-layer {
+                padding: 1.35rem;
+
+                .title-overlay {
+                    font-size: 2.43rem;
+                }
+            }
+
+            .play-icon-layer {
+                height: 5.4rem;
+                width: 5.4rem;
+
+                .play-icon {
+                    height: 3.04rem;
+                    width: 3.04rem;
+                }
+            }
+
+            .progress-bar-layer {
+                bottom: 1.35rem;
+                left: 1.35rem;
+                right: 1.35rem;
+                height: 0.61rem;
+                border-radius: 0.61rem;
+            }
+
+            .new-videos {
+                .layer {
+                    height: 1.69rem;
+                    width: 3.04rem;
+                    border-radius: 0.34rem;
+
+                    &:nth-child(1) {
+                        top: 0.68rem;
+                        right: 0.68rem;
+                    }
+
+                    &:nth-child(2) {
+                        top: 1.01rem;
+                        right: 1.01rem;
+                    }
+
+                    &:nth-child(3) {
+                        top: 1.35rem;
+                        right: 1.35rem;
+                    }
+
+                    .icon {
+                        height: 1.08rem;
+                        width: 1.08rem;
+                    }
+
+                    .label {
+                        font-size: 1.08rem;
+                    }
+                }
+            }
+
+            .rating-badge {
+                bottom: 0.68rem;
+                right: 0.68rem;
+                gap: 0.54rem;
+                padding: 0.54rem 1.08rem;
+                border-radius: var(--border-radius);
+
+                .rating-icon {
+                    height: 1.62rem;
+                    width: 1.62rem;
+                }
+
+                .rating-value {
+                    font-size: 1.55rem;
+                }
+            }
+        }
+
+        .title-bar-container {
+            height: 5.4rem;
+
+            .title-label {
+                padding-left: 2.03rem;
+
+                &:only-child {
+                    padding: 0 0.68rem;
+                }
+            }
+
+            .menu-label-container {
+                width: 2.03rem;
+                height: 5.4rem;
+                padding: 1.35rem 0;
+                transform: translateX(1.35rem);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: @xxxlarge) {
+    .meta-item-container {
+        padding: 1.05rem;
+
+        .poster-container {
+            .dismiss-icon-layer {
+                top: 0.75rem;
+                left: 0.75rem;
+                height: 2.25rem;
+                width: 2.25rem;
+
+                .dismiss-icon {
+                    height: 1.88rem;
+                    width: 1.88rem;
+                }
+            }
+
+            .watched-icon-layer {
+                width: 2.25rem;
+                height: 2.25rem;
+                margin: 0.75rem;
+            }
+
+            .watched-icon {
+                width: 1.13rem;
+                height: 1.13rem;
+            }
+
+            .logo-image-layer {
+                padding: 1.5rem;
+
+                .logo-placeholder {
+                    font-size: 2.25rem;
+                }
+            }
+
+            .title-overlay-layer {
+                padding: 1.5rem;
+
+                .title-overlay {
+                    font-size: 2.7rem;
+                }
+            }
+
+            .play-icon-layer {
+                height: 6rem;
+                width: 6rem;
+
+                .play-icon {
+                    height: 3.38rem;
+                    width: 3.38rem;
+                }
+            }
+
+            .progress-bar-layer {
+                bottom: 1.5rem;
+                left: 1.5rem;
+                right: 1.5rem;
+                height: 0.68rem;
+                border-radius: 0.68rem;
+            }
+
+            .new-videos {
+                .layer {
+                    height: 1.88rem;
+                    width: 3.38rem;
+                    border-radius: 0.38rem;
+
+                    &:nth-child(1) {
+                        top: 0.75rem;
+                        right: 0.75rem;
+                    }
+
+                    &:nth-child(2) {
+                        top: 1.13rem;
+                        right: 1.13rem;
+                    }
+
+                    &:nth-child(3) {
+                        top: 1.5rem;
+                        right: 1.5rem;
+                    }
+
+                    .icon {
+                        height: 1.2rem;
+                        width: 1.2rem;
+                    }
+
+                    .label {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+            .rating-badge {
+                bottom: 0.75rem;
+                right: 0.75rem;
+                gap: 0.6rem;
+                padding: 0.6rem 1.2rem;
+                border-radius: var(--border-radius);
+
+                .rating-icon {
+                    height: 1.8rem;
+                    width: 1.8rem;
+                }
+
+                .rating-value {
+                    font-size: 1.73rem;
+                }
+            }
+        }
+
+        .title-bar-container {
+            height: 6rem;
+
+            .title-label {
+                padding-left: 2.25rem;
+
+                &:only-child {
+                    padding: 0 0.75rem;
+                }
+            }
+
+            .menu-label-container {
+                width: 2.25rem;
+                height: 6rem;
+                padding: 1.5rem 0;
+                transform: translateX(1.5rem);
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: @minimum) {
     .meta-item-container {
         padding: 0.5rem;
 
         .title-bar-container {
             margin-top: 0.5rem;
+        }
+    }
+}
+
+// Phone breakpoints
+@media @phone-portrait {
+    .meta-item-container {
+        padding: 0.5rem;
+
+        .poster-container {
+            .dismiss-icon-layer {
+                top: 0.4rem;
+                left: 0.4rem;
+                height: 1.25rem;
+                width: 1.25rem;
+
+                .dismiss-icon {
+                    height: 1rem;
+                    width: 1rem;
+                }
+            }
+
+            .watched-icon-layer {
+                width: 1.25rem;
+                height: 1.25rem;
+                margin: 0.4rem;
+            }
+
+            .watched-icon {
+                width: 0.6rem;
+                height: 0.6rem;
+            }
+
+            .logo-image-layer {
+                padding: 0.75rem;
+
+                .logo-placeholder {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .title-overlay-layer {
+                padding: 0.75rem;
+
+                .title-overlay {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .play-icon-layer {
+                height: 3.5rem;
+                width: 3.5rem;
+
+                .play-icon {
+                    height: 2rem;
+                    width: 2rem;
+                }
+            }
+
+            .progress-bar-layer {
+                bottom: 0.75rem;
+                left: 0.75rem;
+                right: 0.75rem;
+                height: 0.4rem;
+                border-radius: 0.4rem;
+            }
+
+            .new-videos {
+                .layer {
+                    height: 1rem;
+                    width: 1.8rem;
+                    border-radius: 0.2rem;
+
+                    &:nth-child(1) {
+                        top: 0.4rem;
+                        right: 0.4rem;
+                    }
+
+                    &:nth-child(2) {
+                        top: 0.6rem;
+                        right: 0.6rem;
+                    }
+
+                    &:nth-child(3) {
+                        top: 0.8rem;
+                        right: 0.8rem;
+                    }
+
+                    .icon {
+                        height: 0.7rem;
+                        width: 0.7rem;
+                    }
+
+                    .label {
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+
+            .rating-badge {
+                bottom: 0.4rem;
+                right: 0.4rem;
+                gap: 0.3rem;
+                padding: 0.3rem 0.6rem;
+                border-radius: var(--border-radius);
+
+                .rating-icon {
+                    height: 1rem;
+                    width: 1rem;
+                }
+
+                .rating-value {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .title-bar-container {
+            height: 3.5rem;
+
+            .title-label {
+                padding-left: 1.2rem;
+
+                &:only-child {
+                    padding: 0 0.4rem;
+                }
+            }
+
+            .menu-label-container {
+                width: 1.2rem;
+                height: 3.5rem;
+                padding: 0.75rem 0;
+                transform: translateX(0.85rem);
+            }
+        }
+    }
+}
+
+@media @phone-landscape {
+    .meta-item-container {
+        padding: 0.55rem;
+
+        .poster-container {
+            .dismiss-icon-layer {
+                top: 0.45rem;
+                left: 0.45rem;
+                height: 1.35rem;
+                width: 1.35rem;
+
+                .dismiss-icon {
+                    height: 1.1rem;
+                    width: 1.1rem;
+                }
+            }
+
+            .watched-icon-layer {
+                width: 1.35rem;
+                height: 1.35rem;
+                margin: 0.45rem;
+            }
+
+            .watched-icon {
+                width: 0.65rem;
+                height: 0.65rem;
+            }
+
+            .logo-image-layer {
+                padding: 0.85rem;
+
+                .logo-placeholder {
+                    font-size: 1.3rem;
+                }
+            }
+
+            .title-overlay-layer {
+                padding: 0.85rem;
+
+                .title-overlay {
+                    font-size: 1.6rem;
+                }
+            }
+
+            .play-icon-layer {
+                height: 3.75rem;
+                width: 3.75rem;
+
+                .play-icon {
+                    height: 2.15rem;
+                    width: 2.15rem;
+                }
+            }
+
+            .progress-bar-layer {
+                bottom: 0.85rem;
+                left: 0.85rem;
+                right: 0.85rem;
+                height: 0.42rem;
+                border-radius: 0.42rem;
+            }
+
+            .new-videos {
+                .layer {
+                    height: 1.1rem;
+                    width: 1.95rem;
+                    border-radius: 0.22rem;
+
+                    &:nth-child(1) {
+                        top: 0.45rem;
+                        right: 0.45rem;
+                    }
+
+                    &:nth-child(2) {
+                        top: 0.65rem;
+                        right: 0.65rem;
+                    }
+
+                    &:nth-child(3) {
+                        top: 0.85rem;
+                        right: 0.85rem;
+                    }
+
+                    .icon {
+                        height: 0.75rem;
+                        width: 0.75rem;
+                    }
+
+                    .label {
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+
+            .rating-badge {
+                bottom: 0.45rem;
+                right: 0.45rem;
+                gap: 0.32rem;
+                padding: 0.32rem 0.65rem;
+                border-radius: var(--border-radius);
+
+                .rating-icon {
+                    height: 1.1rem;
+                    width: 1.1rem;
+                }
+
+                .rating-value {
+                    font-size: 1.05rem;
+                }
+            }
+        }
+
+        .title-bar-container {
+            height: 3.75rem;
+
+            .title-label {
+                padding-left: 1.3rem;
+
+                &:only-child {
+                    padding: 0 0.45rem;
+                }
+            }
+
+            .menu-label-container {
+                width: 1.3rem;
+                height: 3.75rem;
+                padding: 0.85rem 0;
+                transform: translateX(0.95rem);
+            }
         }
     }
 }

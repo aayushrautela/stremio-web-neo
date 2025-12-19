@@ -119,6 +119,8 @@ const useMetaDetailsForItem = (item) => {
  */
 const useMetaDetailsForItems = (items, maxItems = 5) => {
     const { core } = useServices();
+    // Use ref to maintain persistent cache across item changes
+    const metadataCacheRef = React.useRef(new Map());
     const [metaDataMap, setMetaDataMap] = React.useState(new Map());
     const [isLoading, setIsLoading] = React.useState(false);
     
@@ -141,27 +143,58 @@ const useMetaDetailsForItems = (items, maxItems = 5) => {
     }, [items, maxItems]);
     
     React.useEffect(() => {
-        if (itemsToFetch.length === 0) {
-            setMetaDataMap(new Map());
+        // Start with cached metadata for items we already have
+        const cache = metadataCacheRef.current;
+        const initialMap = new Map();
+        
+        // Populate initial map with cached data for current items
+        itemsToFetch.forEach(({ key, originalItem }) => {
+            const cached = cache.get(key) || cache.get(originalItem._id) || cache.get(originalItem.id);
+            if (cached) {
+                initialMap.set(key, cached);
+                if (originalItem._id) {
+                    initialMap.set(originalItem._id, cached);
+                }
+                if (originalItem.id && originalItem.id !== originalItem._id) {
+                    initialMap.set(originalItem.id, cached);
+                }
+            }
+        });
+        
+        // Update state with cached data immediately
+        if (initialMap.size > 0) {
+            setMetaDataMap(new Map(initialMap));
+        }
+        
+        // Filter out items we already have metadata for
+        const itemsToFetchNew = itemsToFetch.filter(({ key }) => !cache.has(key));
+        
+        if (itemsToFetchNew.length === 0) {
             setIsLoading(false);
             return;
         }
         
         setIsLoading(true);
         let isCancelled = false;
-        const newMap = new Map();
+        const newMap = new Map(initialMap); // Start with cached data
         const listeners = [];
         
         // Fetch items sequentially to avoid conflicts with single meta_details model
         const fetchSequentially = async (index) => {
-            if (isCancelled || index >= itemsToFetch.length) {
-                if (!isCancelled && newMap.size > 0) {
-                    setMetaDataMap(new Map(newMap));
+            if (isCancelled || index >= itemsToFetchNew.length) {
+                if (!isCancelled) {
+                    // Update cache with all fetched data
+                    newMap.forEach((value, key) => {
+                        cache.set(key, value);
+                    });
+                    if (newMap.size > 0) {
+                        setMetaDataMap(new Map(newMap));
+                    }
                 }
                 return;
             }
             
-            const { metaPath, key } = itemsToFetch[index];
+            const { metaPath, key } = itemsToFetchNew[index];
             
             // Dispatch load action
             core.transport.dispatch({
@@ -249,12 +282,21 @@ const useMetaDetailsForItems = (items, maxItems = 5) => {
             if (metaData && !isCancelled) {
                 // Store with multiple keys for easier lookup
                 newMap.set(key, metaData);
-                const originalItem = itemsToFetch[index].originalItem;
+                const originalItem = itemsToFetchNew[index].originalItem;
                 if (originalItem._id) {
                     newMap.set(originalItem._id, metaData);
                 }
                 if (originalItem.id && originalItem.id !== originalItem._id) {
                     newMap.set(originalItem.id, metaData);
+                }
+                
+                // Update cache immediately
+                cache.set(key, metaData);
+                if (originalItem._id) {
+                    cache.set(originalItem._id, metaData);
+                }
+                if (originalItem.id && originalItem.id !== originalItem._id) {
+                    cache.set(originalItem.id, metaData);
                 }
                 
                 // Update map incrementally so UI can show progress
@@ -279,7 +321,8 @@ const useMetaDetailsForItems = (items, maxItems = 5) => {
             listeners.forEach((listener) => {
                 core.transport.off('NewState', listener);
             });
-            core.transport.dispatch({ action: 'Unload' }, 'meta_details');
+            // Don't unload meta_details here as it might be used by other components
+            // Only unload if we're the last one using it (would need ref counting for that)
         };
     }, [itemsToFetch, core]);
     

@@ -54,9 +54,13 @@ const applyCatalogPreferences = (
     const filteredCatalogs = enabledCatalogs.map(({ catalog }) => catalog);
 
     // Collect hero items from catalogs with showInHero enabled
+    // Limit to first 20 items to avoid performance issues
     const heroItems: any[] = [];
+    const MAX_HERO_ITEMS = 20;
     if (preferences.heroSectionEnabled !== false) {
         filteredCatalogs.forEach((catalog) => {
+            if (heroItems.length >= MAX_HERO_ITEMS) return;
+            
             const id = getCatalogId(catalog);
             if (id) {
                 const originalIndex = catalogMap.get(id)?.index ?? -1;
@@ -66,11 +70,9 @@ const applyCatalogPreferences = (
                 if (showInHero !== false) {
                     if (catalog.content?.type === 'Ready' && Array.isArray(catalog.content.content)) {
                         catalog.content.content.forEach((item: any) => {
-                            if (item &&
-                                typeof item.background === 'string' &&
-                                item.background.length > 0 &&
-                                typeof item.logo === 'string' &&
-                                item.logo.length > 0) {
+                            // Include all items from hero-enabled catalogs
+                            // Missing background/logo will be fetched by Board component
+                            if (item && heroItems.length < MAX_HERO_ITEMS) {
                                 heroItems.push(item);
                             }
                         });

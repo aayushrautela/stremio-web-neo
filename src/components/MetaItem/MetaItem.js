@@ -15,7 +15,7 @@ const { useDataEnrichmentPrefs } = require('stremio/common/dataEnrichmentPrefs')
 const { ICON_FOR_TYPE } = require('stremio/common/CONSTANTS');
 const styles = require('./styles');
 
-const MetaItem = React.memo(({ className, type, name, poster, posterShape, posterChangeCursor, progress, newVideos, options, deepLinks, dataset, optionOnSelect, onDismissClick, onPlayClick, watched, background, logo, links, ...props }) => {
+const MetaItem = React.memo(({ className, type, name, poster, posterShape, posterChangeCursor, progress, newVideos, options, deepLinks, dataset, optionOnSelect, onDismissClick, onPlayClick, watched, background, logo, links, menuDirection, ...props }) => {
     const { t } = useTranslation();
     const profile = useProfile();
     const [menuOpen, onMenuOpen, onMenuClose] = useBinaryState(false);
@@ -213,6 +213,7 @@ const MetaItem = React.memo(({ className, type, name, poster, posterShape, poste
                                     className={styles['menu-label-container']}
                                     renderLabelContent={renderMenuLabelContent}
                                     options={options}
+                                    direction={menuDirection}
                                     onOpen={onMenuOpen}
                                     onClose={onMenuClose}
                                     onSelect={menuOnSelect}
@@ -255,7 +256,8 @@ MetaItem.propTypes = {
     watched: PropTypes.bool,
     background: PropTypes.string,
     logo: PropTypes.string,
-    links: PropTypes.array
+    links: PropTypes.array,
+    menuDirection: PropTypes.oneOf(['top-left', 'bottom-left', 'top-right', 'bottom-right'])
 };
 
 module.exports = MetaItem;

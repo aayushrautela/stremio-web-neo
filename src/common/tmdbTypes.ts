@@ -42,6 +42,23 @@ export type TMDBCollection = {
     backdrop_path: string | null;
 };
 
+export type TMDBCollectionPart = {
+    id: number;
+    title: string;
+    overview: string;
+    poster_path: string | null;
+    backdrop_path: string | null;
+    release_date: string;
+};
+
+export type TMDBCollectionDetails = {
+    id: number;
+    name: string;
+    poster_path: string | null;
+    backdrop_path: string | null;
+    parts: TMDBCollectionPart[];
+};
+
 export type TMDBMovie = {
     id: number;
     title: string;
@@ -92,7 +109,9 @@ export type TMDBData = {
     cast: TMDBCast[];
     maturityRating: string | null;
     collection: TMDBCollection | null;
+    collectionParts: TMDBCollectionPart[];
     similar: (TMDBMovie | TMDBTV)[];
     recommendations: (TMDBMovie | TMDBTV)[];
+    overview: string | null;
 };
 

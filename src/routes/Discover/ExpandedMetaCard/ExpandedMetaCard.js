@@ -151,13 +151,13 @@ const ExpandedMetaCard = React.forwardRef(({ className, item, open, rect, poster
 
                 <div className={styles['actions-row']}>
                     {typeof showHref === 'string' ? (
-                        <Button className={classnames(styles['action-button'], styles['primary-button'])} href={showHref} title={t('CTX_PLAY')}>
+                        <Button className={classnames(styles['action-button'], styles['primary-button'], styles['play-button'])} href={showHref} title={t('CTX_PLAY')}>
                             <Icon className={styles['button-icon']} name={'play'} />
                             <span className={styles['button-label']}>{t('CTX_PLAY')}</span>
                         </Button>
                     ) : null}
                     {typeof trailerHref === 'string' ? (
-                        <Button className={classnames(styles['action-button'], styles['secondary-button'])} href={trailerHref} title={t('TRAILER')}>
+                        <Button className={classnames(styles['action-button'], styles['secondary-button'], styles['trailer-button'])} href={trailerHref} title={t('TRAILER')}>
                             <Icon className={styles['button-icon']} name={'play'} />
                             <span className={styles['button-label']}>{t('TRAILER')}</span>
                         </Button>

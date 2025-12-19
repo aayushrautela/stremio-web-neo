@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { extractIMDbId } from './extractIMDbId';
 import { getTMDBData, getTMDBApiKey } from './tmdbApi';
+import { useDataEnrichmentPrefs } from './dataEnrichmentPrefs';
 import type { TMDBData } from './tmdbTypes';
 
 type UseTMDBDataResult = {
@@ -31,6 +32,7 @@ export const useTMDBData = (metaItem: any): UseTMDBDataResult => {
 
     const imdbId = useMemo(() => extractIMDbId(metaItem), [metaItem]);
     const apiKey = useMemo(() => getTMDBApiKey(), []);
+    const { showSimilarTitles } = useDataEnrichmentPrefs();
 
     useEffect(() => {
         if (!imdbId || !apiKey) {
@@ -40,7 +42,17 @@ export const useTMDBData = (metaItem: any): UseTMDBDataResult => {
             return;
         }
 
-        const cached = getCachedData(imdbId);
+        const determineType = (): 'movie' | 'tv' => {
+            if (metaItem?.type === 'series' || metaItem?.type === 'tv') {
+                return 'tv';
+            }
+            return 'movie';
+        };
+
+        const type = determineType();
+        const cacheKey = `${imdbId}:${type}:${showSimilarTitles ? '1' : '0'}`;
+
+        const cached = getCachedData(cacheKey);
         if (cached) {
             setData(cached);
             setLoading(false);
@@ -51,17 +63,10 @@ export const useTMDBData = (metaItem: any): UseTMDBDataResult => {
         setLoading(true);
         setError(null);
 
-        const determineType = (): 'movie' | 'tv' => {
-            if (metaItem?.type === 'series' || metaItem?.type === 'tv') {
-                return 'tv';
-            }
-            return 'movie';
-        };
-
-        getTMDBData(imdbId, apiKey, determineType())
+        getTMDBData(imdbId, apiKey, type, { includeCollectionParts: showSimilarTitles })
             .then((result) => {
                 if (result) {
-                    setCachedData(imdbId, result);
+                    setCachedData(cacheKey, result);
                     setData(result);
                 } else {
                     setData(null);
@@ -73,7 +78,7 @@ export const useTMDBData = (metaItem: any): UseTMDBDataResult => {
                 setLoading(false);
                 setData(null);
             });
-    }, [imdbId, apiKey, metaItem]);
+    }, [imdbId, apiKey, metaItem, showSimilarTitles]);
 
     return { data, loading, error };
 };

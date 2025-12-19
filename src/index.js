@@ -25,29 +25,34 @@ const translations = Object.fromEntries(Object.entries(stremioTranslations()).ma
 // Add Home Screen settings translations
 if (translations['en-US']) {
     Object.assign(translations['en-US'].translation, {
-        "SETTINGS_NAV_HOME_SCREEN": "Home Screen",
-        "SETTINGS_HOME_SCREEN_ENABLE_HERO": "Enable Hero Section",
-        "SETTINGS_HOME_SCREEN_CATALOGS": "Catalogs",
-        "SETTINGS_HOME_SCREEN_ENABLE_CATALOG": "Enable",
-        "SETTINGS_HOME_SCREEN_SHOW_IN_HERO": "Show in Hero",
-        "SETTINGS_HOME_SCREEN_NO_CATALOGS": "No catalogs available",
-        "SETTINGS_HOME_SCREEN_MOVE_UP": "Move Up",
-        "SETTINGS_HOME_SCREEN_MOVE_DOWN": "Move Down",
-        "SETTINGS_HOME_SCREEN_DRAG_HANDLE": "Drag to reorder",
-        "SETTINGS_NAV_DATA_ENRICHMENT": "Data Enrichment",
-        "SETTINGS_DATA_ENRICHMENT_TMDB_API_KEY": "TMDB API Key",
-        "SETTINGS_SECTION_TMDB": "TMDB",
-        "SETTINGS_SECTION_RATING": "Rating",
-        "SETTINGS_DATA_ENRICHMENT_SHOW_CAST": "Enhanced Cast Section",
-        "SETTINGS_DATA_ENRICHMENT_SHOW_POSTER_RATINGS": "Show Ratings on Posters",
-        "SETTINGS_DATA_ENRICHMENT_ADD_KEY": "Add Key",
-        "IMDB": "IMDb",
-        "DIRECTOR": "Director",
-        "CAST": "Cast",
-        "BACK_TO_BROWSE": "Back to Browse",
-        "WATCH_NOW": "Watch Now",
-        "MY_LIST": "My List",
-        "HERO": "Hero"
+        'SETTINGS_NAV_HOME_SCREEN': 'Home Screen',
+        'SETTINGS_HOME_SCREEN_ENABLE_HERO': 'Enable Hero Section',
+        'SETTINGS_HOME_SCREEN_CATALOGS': 'Catalogs',
+        'SETTINGS_HOME_SCREEN_ENABLE_CATALOG': 'Enable',
+        'SETTINGS_HOME_SCREEN_SHOW_IN_HERO': 'Show in Hero',
+        'SETTINGS_HOME_SCREEN_NO_CATALOGS': 'No catalogs available',
+        'SETTINGS_HOME_SCREEN_MOVE_UP': 'Move Up',
+        'SETTINGS_HOME_SCREEN_MOVE_DOWN': 'Move Down',
+        'SETTINGS_HOME_SCREEN_DRAG_HANDLE': 'Drag to reorder',
+        'SETTINGS_NAV_DATA_ENRICHMENT': 'Data Enrichment',
+        'SETTINGS_DATA_ENRICHMENT_TMDB_API_KEY': 'TMDB API Key',
+        'SETTINGS_SECTION_TMDB': 'TMDB',
+        'SETTINGS_SECTION_RATING': 'Rating',
+        'SETTINGS_DATA_ENRICHMENT_SHOW_CAST': 'Enhanced Cast Section',
+        'SETTINGS_DATA_ENRICHMENT_SHOW_DESCRIPTION': 'Description',
+        'SETTINGS_DATA_ENRICHMENT_SHOW_MATURITY_RATING': 'Maturity Rating',
+        'SETTINGS_DATA_ENRICHMENT_SHOW_SIMILAR_TITLES': 'Similar Titles',
+        'SETTINGS_DATA_ENRICHMENT_SHOW_POSTER_RATINGS': 'Show Ratings on Posters',
+        'SETTINGS_DATA_ENRICHMENT_ADD_KEY': 'Add Key',
+        'COLLECTION': 'Collection',
+        'SIMILAR_TITLES': 'More like this',
+        'IMDB': 'IMDb',
+        'DIRECTOR': 'Director',
+        'CAST': 'Cast',
+        'BACK_TO_BROWSE': 'Back to Browse',
+        'WATCH_NOW': 'Watch Now',
+        'MY_LIST': 'My List',
+        'HERO': 'Hero',
     });
 }
 
@@ -63,7 +68,9 @@ i18n
     });
 
 const root = ReactDOM.createRoot(document.getElementById('app'));
-root.render(<App />);
+root.render(
+    <App />
+);
 
 if (process.env.NODE_ENV === 'production' && process.env.SERVICE_WORKER_DISABLED !== 'true' && process.env.SERVICE_WORKER_DISABLED !== true && 'serviceWorker' in navigator) {
     window.addEventListener('load', () => {

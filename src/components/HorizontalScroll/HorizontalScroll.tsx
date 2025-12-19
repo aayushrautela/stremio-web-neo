@@ -26,8 +26,24 @@ const HorizontalScroll = ({ className, children }: Props) => {
             ));
         };
 
-        ref.current?.addEventListener('scroll', onScroll);
-        return () => ref.current?.removeEventListener('scroll', onScroll);
+        const el = ref.current;
+        if (!el) return;
+
+        const onFocusIn = (event: Event) => {
+            const target = event.target as HTMLElement | null;
+            if (!target) return;
+            if (!el.contains(target)) return;
+            requestAnimationFrame(() => {
+                target.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+            });
+        };
+
+        el.addEventListener('scroll', onScroll);
+        el.addEventListener('focusin', onFocusIn);
+        return () => {
+            el.removeEventListener('scroll', onScroll);
+            el.removeEventListener('focusin', onFocusIn);
+        };
     }, []);
 
     return (

@@ -71,27 +71,57 @@
                     }
                 }
 
+                .inline-advanced-filters {
+                    display: contents;
+                }
+
                 .filter-container {
-                    display: flex;
-                    flex: 1 0 5rem;
+                    display: none;
+                    flex: 0 0 auto;
                     justify-content: flex-end;
 
                     .filter-button {
                         flex: none;
-                        display: none;
+                        display: flex;
                         align-items: center;
                         justify-content: center;
-                        width: 3rem;
+                        gap: 0.5rem;
                         height: 3rem;
+                        padding: 0 1rem;
                         margin-left: 1.5rem;
                         border-radius: var(--border-radius);
                         background-color: var(--overlay-color);
 
                         .filter-icon {
                             flex: none;
-                            width: 1.4rem;
-                            height: 1.4rem;
+                            width: 1.2rem;
+                            height: 1.2rem;
                             color: var(--primary-foreground-color);
+                        }
+
+                        .filter-label {
+                            font-size: 0.9rem;
+                            font-weight: 500;
+                            color: var(--primary-foreground-color);
+                        }
+
+                        .filter-count {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            min-width: 1.25rem;
+                            height: 1.25rem;
+                            padding: 0 0.35rem;
+                            font-size: 0.75rem;
+                            font-weight: 600;
+                            color: var(--primary-background-color);
+                            background-color: var(--primary-accent-color);
+                            border-radius: 0.625rem;
+                        }
+
+                        &.has-active-filters {
+                            background-color: rgba(123, 91, 245, 0.15);
+                            border: 1px solid rgba(123, 91, 245, 0.4);
                         }
                     }
                 }
@@ -212,9 +242,8 @@
 }
 
 .dimmed {
-    filter: blur(2px);
     opacity: 0.55;
-    transition: filter 180ms ease, opacity 180ms ease;
+    transition: opacity 180ms ease;
 }
 
 .covered {
@@ -245,20 +274,19 @@
 .selectable-inputs-modal {
     .selectable-inputs-modal-container {
         overflow: visible;
+        width: 92%;
+        max-width: 44rem;
 
         .selectable-inputs-modal-content {
             overflow: visible !important;
+            padding: 0.5rem 0;
 
             .select-input {
                 height: 3rem;
-                display: none;
+                display: flex;
 
-                &:nth-child(n+4) {
-                    display: flex;
-
-                    &:not(:last-child) {
-                        margin-bottom: 1rem;
-                    }
+                &:not(:last-child) {
+                    margin-bottom: 1rem;
                 }
 
                 .multiselect-menu-container {
@@ -322,11 +350,25 @@
     .discover-container {
         .discover-content {
             .catalog-container {
+                .selectable-inputs-container {
+                    .inline-advanced-filters {
+                        display: none;
+                    }
+
+                    .filter-container {
+                        display: flex;
+                    }
+                }
+
                 .meta-items-container {
                     grid-template-columns: repeat(4, 1fr);
                 }
             }
         }
+    }
+
+    :global(.inline-multiselect) {
+        display: none !important;
     }
 }
 
@@ -363,23 +405,88 @@
         .discover-content {
             .catalog-container {
                 .selectable-inputs-container {
+                    padding: 0.8rem 0.5rem;
                     justify-content: space-between;
 
                     .select-input {
+                        flex: 0 1 auto;
+
                         &:nth-child(n+2) {
                             display: none;
 
                             &~.filter-container {
                                 .filter-button {
                                     display: flex;
+                                    margin-left: 0.5rem;
+                                    width: 2.5rem;
+                                    height: 2.5rem;
+
+                                    .filter-icon {
+                                        width: 1.2rem;
+                                        height: 1.2rem;
+                                    }
                                 }
                             }
                         }
                     }
+
+                    .inline-advanced-filters {
+                        display: none;
+                    }
+
+                    .filter-container {
+                        display: flex;
+                    }
                 }
 
                 .meta-items-container {
-                    grid-template-columns: repeat(2, 1fr);
+                    padding: 0 0.4rem;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-gap: 0.15rem;
+
+                    :global(.meta-item-container) {
+                        padding: 0.4rem;
+                    }
+
+                    .meta-item-placeholder {
+                        padding: 0.4rem;
+
+                        .title-bar-container {
+                            height: 2.4rem;
+                            margin-top: 0.3rem;
+                        }
+                    }
+                }
+
+                .missing-addon-warning-container {
+                    padding: 0 0.5rem 0.8rem 0.5rem;
+
+                    .warning-label {
+                        margin-bottom: 0.6rem;
+                        font-size: 1.2rem;
+                    }
+
+                    .install-button {
+                        padding: 0.8rem;
+                    }
+                }
+
+                .message-container {
+                    padding: 0 0.5rem;
+
+                    &:first-child {
+                        padding: 2rem 0.5rem;
+                    }
+
+                    .image {
+                        width: 8rem;
+                        height: 8rem;
+                        margin-bottom: 0.8rem;
+                    }
+
+                    .message-label {
+                        font-size: 1.5rem;
+                    }
                 }
             }
         }
@@ -395,7 +502,7 @@
                         display: flex;
 
                         &:not(:last-child) {
-                            margin-bottom: 1rem;
+                            margin-bottom: 0.8rem;
                         }
                     }
                 }

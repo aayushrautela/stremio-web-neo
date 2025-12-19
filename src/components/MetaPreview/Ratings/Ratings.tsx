@@ -18,10 +18,10 @@ const Ratings = ({ ratingInfo, className }: Props) => {
 
     return (
         <div className={classNames(styles['ratings-container'], className)}>
-            <div className={classNames(styles['icon-container'], { [styles['disabled']]: disabled })} onClick={onLiked}>
+            <div className={classNames(styles['rating-button'], { [styles['disabled']]: disabled })} onClick={onLiked}>
                 <Icon name={liked ? 'thumbs-up' : 'thumbs-up-outline'} className={styles['icon']} />
             </div>
-            <div className={classNames(styles['icon-container'], { [styles['disabled']]: disabled })} onClick={onLoved}>
+            <div className={classNames(styles['rating-button'], { [styles['disabled']]: disabled })} onClick={onLoved}>
                 <Icon name={loved ? 'heart' : 'heart-outline'} className={styles['icon']} />
             </div>
         </div>

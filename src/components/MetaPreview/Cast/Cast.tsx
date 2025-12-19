@@ -23,7 +23,13 @@ const Cast: React.FC<Props> = ({ className, cast }) => {
             <div className={styles['cast-label']}>{t('CAST')}</div>
             <div className={styles['cast-list']}>
                 {displayCast.map((member) => (
-                    <div key={member.id} className={styles['cast-button']}>
+                    <div
+                        key={member.id}
+                        className={styles['cast-button']}
+                        onClick={() => {
+                            window.location.hash = `/search?search=${encodeURIComponent(member.name)}`;
+                        }}
+                    >
                         <div className={styles['cast-image-container']}>
                             {member.profile_path ? (
                                 <Image

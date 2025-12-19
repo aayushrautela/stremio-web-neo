@@ -7,32 +7,31 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: 0;
-    height: 4rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(3px);
-    border-radius: 2rem;
-    border: none;
-    padding: 0;
-    transition: border-radius 0.2s ease, opacity 0.2s ease;
+    gap: 1rem;
     overflow: visible;
     position: relative;
     z-index: 1;
 
-    &:hover, &:focus {
-        background-color: rgba(255, 255, 255, 0.15);
-        border-radius: 0.5rem;
-    }
-
-    .icon-container {
+    .rating-button {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 4rem;
         width: 4rem;
+        height: 4rem;
         padding: 0;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--primary-foreground-color);
+        backdrop-filter: blur(3px);
+        border: none;
         cursor: pointer;
         flex: none;
+        transition: border-radius 0.2s ease, background-color 0.2s ease;
+
+        &:hover, &:focus {
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 0.5rem;
+        }
 
         .icon {
             width: 1.6rem;
@@ -50,11 +49,9 @@
 
 @media @phone-landscape {
     .ratings-container {
-        height: 3.5rem;
-
-        .icon-container {
-            height: 3.5rem;
+        .rating-button {
             width: 3.5rem;
+            height: 3.5rem;
 
             .icon {
                 width: 1.4rem;
@@ -66,11 +63,9 @@
 
 @media only screen and (max-width: @minimum) {
     .ratings-container {
-        height: 4rem;
-
-        .icon-container {
-            height: 4rem;
+        .rating-button {
             width: 4rem;
+            height: 4rem;
 
             .icon {
                 width: 1.6rem;

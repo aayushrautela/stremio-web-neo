@@ -42,6 +42,7 @@ const ContinueWatchingItem = ({ _id, notifications, deepLinks, ...props }) => {
             notifications={notifications}
             onClick={onClick}
             onDismissClick={onDismissClick}
+            menuDirection="top-right"
         />
     );
 };

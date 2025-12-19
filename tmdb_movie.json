@@ -1,0 +1,1789 @@
+{
+    "adult": false,
+    "backdrop_path": "/jlGmlFOcfo8n5tURmhC7YVd4Iyy.jpg",
+    "belongs_to_collection": {
+      "id": 531242,
+      "name": "Suicide Squad Collection",
+      "poster_path": "/1OCbjYENSzVcpQgOYLrV3B5598d.jpg",
+      "backdrop_path": "/e0uUxFdhdGLcvy9eC7WlO2eLusr.jpg"
+    },
+    "budget": 185000000,
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      }
+    ],
+    "homepage": "https://www.thesuicidesquad.net",
+    "id": 436969,
+    "imdb_id": "tt6334354",
+    "origin_country": [
+      "US"
+    ],
+    "original_language": "en",
+    "original_title": "The Suicide Squad",
+    "overview": "Supervillains Harley Quinn, Bloodsport, Peacemaker and a collection of nutty cons at Belle Reve prison join the super-secret, super-shady Task Force X as they are dropped off at the remote, enemy-infused island of Corto Maltese.",
+    "popularity": 20.4338,
+    "poster_path": "/q61qEyssk2ku3okWICKArlAdhBn.jpg",
+    "production_companies": [
+      {
+        "id": 128064,
+        "logo_path": "/13F3Jf7EFAcREU0xzZqJnVnyGXu.png",
+        "name": "DC Films",
+        "origin_country": "US"
+      },
+      {
+        "id": 507,
+        "logo_path": "/aRmHe6GWxYMRCQljF75rn2B9Gv8.png",
+        "name": "Atlas Entertainment",
+        "origin_country": "US"
+      },
+      {
+        "id": 11565,
+        "logo_path": "/odU3l6csuBmXUrzFm6araUgEUHQ.png",
+        "name": "The Safran Company",
+        "origin_country": "US"
+      },
+      {
+        "id": 174,
+        "logo_path": "/ingPVoHnINIrFR7WHmYux1f5pES.png",
+        "name": "Warner Bros. Pictures",
+        "origin_country": "US"
+      }
+    ],
+    "production_countries": [
+      {
+        "iso_3166_1": "US",
+        "name": "United States of America"
+      }
+    ],
+    "release_date": "2021-07-28",
+    "revenue": 168717425,
+    "runtime": 132,
+    "spoken_languages": [
+      {
+        "english_name": "English",
+        "iso_639_1": "en",
+        "name": "English"
+      },
+      {
+        "english_name": "French",
+        "iso_639_1": "fr",
+        "name": "Français"
+      },
+      {
+        "english_name": "Spanish",
+        "iso_639_1": "es",
+        "name": "Español"
+      }
+    ],
+    "status": "Released",
+    "tagline": "They’re dying to save the world.",
+    "title": "The Suicide Squad",
+    "video": false,
+    "vote_average": 7.5,
+    "vote_count": 9258,
+    "release_dates": {
+      "results": [
+        {
+          "iso_3166_1": "AE",
+          "release_dates": [
+            {
+              "certification": "",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "AR",
+          "release_dates": [
+            {
+              "certification": "+16",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "AU",
+          "release_dates": [
+            {
+              "certification": "R 18+",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            },
+            {
+              "certification": "MA 15+",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "Rating lowered from R 18+ to MA 15+ on this date.",
+              "release_date": "2021-08-15T00:00:00.000Z",
+              "type": 3
+            },
+            {
+              "certification": "MA 15+",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-11-01T00:00:00.000Z",
+              "type": 4
+            },
+            {
+              "certification": "MA 15+",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-11-22T00:00:00.000Z",
+              "type": 5
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "BE",
+          "release_dates": [
+            {
+              "certification": "16",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-07-28T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "BG",
+          "release_dates": [
+            {
+              "certification": "",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-06T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "BR",
+          "release_dates": [
+            {
+              "certification": "16",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "CA",
+          "release_dates": [
+            {
+              "certification": "",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "Fantasia International Film Festival",
+              "release_date": "2021-08-04T00:00:00.000Z",
+              "type": 1
+            },
+            {
+              "certification": "14A",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-06T00:00:00.000Z",
+              "type": 3
+            },
+            {
+              "certification": "",
+              "descriptors": [],
+              "iso_639_1": "fr",
+              "note": "Super Écran",
+              "release_date": "2021-12-26T00:00:00.000Z",
+              "type": 6
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "CH",
+          "release_dates": [
+            {
+              "certification": "16",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-07-28T00:00:00.000Z",
+              "type": 4
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "CN",
+          "release_dates": [
+            {
+              "certification": "",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "Shanghai International Film Festival（IMAX）",
+              "release_date": "2023-06-10T00:00:00.000Z",
+              "type": 1
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "CZ",
+          "release_dates": [
+            {
+              "certification": "18+",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "DE",
+          "release_dates": [
+            {
+              "certification": "16",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            },
+            {
+              "certification": "16",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-09-20T00:00:00.000Z",
+              "type": 4
+            },
+            {
+              "certification": "16",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-11-25T00:00:00.000Z",
+              "type": 5
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "DK",
+          "release_dates": [
+            {
+              "certification": "15",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "EE",
+          "release_dates": [
+            {
+              "certification": "",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-06T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "ES",
+          "release_dates": [
+            {
+              "certification": "16",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-06T00:00:00.000Z",
+              "type": 3
+            },
+            {
+              "certification": "",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-11-02T00:00:00.000Z",
+              "type": 5
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "FI",
+          "release_dates": [
+            {
+              "certification": "K-16",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-06T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "FR",
+          "release_dates": [
+            {
+              "certification": "TP",
+              "descriptors": [],
+              "iso_639_1": "fr",
+              "note": "",
+              "release_date": "2021-07-28T00:00:00.000Z",
+              "type": 3
+            },
+            {
+              "certification": "",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "VOD",
+              "release_date": "2021-11-24T00:00:00.000Z",
+              "type": 4
+            },
+            {
+              "certification": "16",
+              "descriptors": [],
+              "iso_639_1": "fr",
+              "note": "MyCanal",
+              "release_date": "2022-03-30T00:00:00.000Z",
+              "type": 4
+            },
+            {
+              "certification": "16",
+              "descriptors": [],
+              "iso_639_1": "fr",
+              "note": "DVD, Blu-Ray & 4K UHD",
+              "release_date": "2021-12-01T00:00:00.000Z",
+              "type": 5
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "GB",
+          "release_dates": [
+            {
+              "certification": "15",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-07-30T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "GE",
+          "release_dates": [
+            {
+              "certification": "",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "GR",
+          "release_dates": [
+            {
+              "certification": "K15",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-19T00:00:00.000Z",
+              "type": 3
+            },
+            {
+              "certification": "",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "DVD, Blu-ray",
+              "release_date": "2021-11-23T00:00:00.000Z",
+              "type": 5
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "HK",
+          "release_dates": [
+            {
+              "certification": "III",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "HU",
+          "release_dates": [
+            {
+              "certification": "18",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            },
+            {
+              "certification": "18",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "TVOD",
+              "release_date": "2021-11-09T00:00:00.000Z",
+              "type": 4
+            },
+            {
+              "certification": "18",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "HBO Max",
+              "release_date": "2022-04-03T00:00:00.000Z",
+              "type": 4
+            },
+            {
+              "certification": "18",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "DVD, Blu-ray, 4K UHD",
+              "release_date": "2021-12-15T00:00:00.000Z",
+              "type": 5
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "ID",
+          "release_dates": [
+            {
+              "certification": "21+",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-09-16T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "IE",
+          "release_dates": [
+            {
+              "certification": "16",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-07-30T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "IL",
+          "release_dates": [
+            {
+              "certification": "16",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "IN",
+          "release_dates": [
+            {
+              "certification": "A",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-06T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "IS",
+          "release_dates": [
+            {
+              "certification": "",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-04T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "IT",
+          "release_dates": [
+            {
+              "certification": "T",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "JP",
+          "release_dates": [
+            {
+              "certification": "R15+",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-13T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "KR",
+          "release_dates": [
+            {
+              "certification": "19",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-04T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "KZ",
+          "release_dates": [
+            {
+              "certification": "",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "LB",
+          "release_dates": [
+            {
+              "certification": "",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "LT",
+          "release_dates": [
+            {
+              "certification": "N-16",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-06T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "LV",
+          "release_dates": [
+            {
+              "certification": "16+",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-06T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "MO",
+          "release_dates": [
+            {
+              "certification": "D",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "MX",
+          "release_dates": [
+            {
+              "certification": "C",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "NL",
+          "release_dates": [
+            {
+              "certification": "16",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-02T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "NZ",
+          "release_dates": [
+            {
+              "certification": "R16",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "PA",
+          "release_dates": [
+            {
+              "certification": "",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "PE",
+          "release_dates": [
+            {
+              "certification": "",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-19T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "PL",
+          "release_dates": [
+            {
+              "certification": "18",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-07-30T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "PT",
+          "release_dates": [
+            {
+              "certification": "M/16",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "RO",
+          "release_dates": [
+            {
+              "certification": "15",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-06T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "RU",
+          "release_dates": [
+            {
+              "certification": "18+",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "SA",
+          "release_dates": [
+            {
+              "certification": "",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "SE",
+          "release_dates": [
+            {
+              "certification": "15",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-04T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "SG",
+          "release_dates": [
+            {
+              "certification": "M18",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "SK",
+          "release_dates": [
+            {
+              "certification": "",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "TR",
+          "release_dates": [
+            {
+              "certification": "18+",
+              "descriptors": [
+                "Violence / Horror",
+                "Negative examples"
+              ],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-07-30T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "TW",
+          "release_dates": [
+            {
+              "certification": "15+",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "UA",
+          "release_dates": [
+            {
+              "certification": "18+",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "US",
+          "release_dates": [
+            {
+              "certification": "R",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "Los Angeles, California",
+              "release_date": "2021-08-02T00:00:00.000Z",
+              "type": 1
+            },
+            {
+              "certification": "R",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-06T00:00:00.000Z",
+              "type": 3
+            },
+            {
+              "certification": "R",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "HBO Max",
+              "release_date": "2021-08-05T00:00:00.000Z",
+              "type": 4
+            },
+            {
+              "certification": "R",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-09-17T00:00:00.000Z",
+              "type": 4
+            },
+            {
+              "certification": "R",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "HBO",
+              "release_date": "2021-12-23T00:00:00.000Z",
+              "type": 6
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "UY",
+          "release_dates": [
+            {
+              "certification": "",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-19T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "VN",
+          "release_dates": [
+            {
+              "certification": "",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-11-19T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        },
+        {
+          "iso_3166_1": "ZA",
+          "release_dates": [
+            {
+              "certification": "16",
+              "descriptors": [],
+              "iso_639_1": "",
+              "note": "",
+              "release_date": "2021-08-06T00:00:00.000Z",
+              "type": 3
+            }
+          ]
+        }
+      ]
+    },
+    "similar": {
+      "page": 1,
+      "results": [
+        {
+          "adult": false,
+          "backdrop_path": "/77P56ZcL8M9Cw7FIptMIGjhNJoj.jpg",
+          "genre_ids": [
+            12,
+            878,
+            28
+          ],
+          "id": 1858,
+          "original_language": "en",
+          "original_title": "Transformers",
+          "overview": "Young teenager Sam Witwicky becomes involved in the ancient struggle between two extraterrestrial factions of transforming robots – the heroic Autobots and the evil Decepticons. Sam holds the clue to unimaginable power and the Decepticons will stop at nothing to retrieve it.",
+          "popularity": 3.4166,
+          "poster_path": "/1P7w3AImoEOWJX7nn3fdaKDfEQA.jpg",
+          "release_date": "2007-06-27",
+          "title": "Transformers",
+          "video": false,
+          "vote_average": 6.821,
+          "vote_count": 11874
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/uzIGtyS6bbnJzGsPL93WCF1FWm8.jpg",
+          "genre_ids": [
+            12,
+            28,
+            14
+          ],
+          "id": 1865,
+          "original_language": "en",
+          "original_title": "Pirates of the Caribbean: On Stranger Tides",
+          "overview": "Captain Jack Sparrow crosses paths with a woman from his past, and he's not sure if it's love — or if she's a ruthless con artist who's using him to find the fabled Fountain of Youth. When she forces him aboard the Queen Anne's Revenge, the ship of the formidable pirate Blackbeard, Jack finds himself on an unexpected adventure in which he doesn't know who to fear more: Blackbeard or the woman from his past.",
+          "popularity": 12.9581,
+          "poster_path": "/keGfSvCmYj7CvdRx36OdVrAEibE.jpg",
+          "release_date": "2011-05-15",
+          "title": "Pirates of the Caribbean: On Stranger Tides",
+          "video": false,
+          "vote_average": 6.563,
+          "vote_count": 14612
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/qJaR9AZx2Qq2oJ3krnSO0Z5ne5I.jpg",
+          "genre_ids": [
+            12,
+            18,
+            35
+          ],
+          "id": 1878,
+          "original_language": "en",
+          "original_title": "Fear and Loathing in Las Vegas",
+          "overview": "Raoul Duke and his attorney Dr. Gonzo drive a red convertible across the Mojave desert to Las Vegas with a suitcase full of drugs to cover a motorcycle race. As their consumption of drugs increases at an alarming rate, the stoned duo trash their hotel room and fear legal repercussions. Duke begins to drive back to L.A., but after an odd run-in with a cop, he returns to Sin City and continues his wild drug binge.",
+          "popularity": 2.9272,
+          "poster_path": "/tisNLcMkxryU2zxhi0PiyDFqhm0.jpg",
+          "release_date": "1998-05-22",
+          "title": "Fear and Loathing in Las Vegas",
+          "video": false,
+          "vote_average": 7.211,
+          "vote_count": 4852
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/waWPYcXrbENXEoJkrQt7zFUdq14.jpg",
+          "genre_ids": [
+            12,
+            10751,
+            14,
+            878,
+            10770
+          ],
+          "id": 1884,
+          "original_language": "en",
+          "original_title": "The Ewok Adventure",
+          "overview": "Wicket the Ewok and his friends agree to help two shipwrecked human children, Mace and Cindel, on a quest to find their parents.",
+          "popularity": 2.4421,
+          "poster_path": "/4GrECLKaJhYA6ooSTOG0XEuPnSl.jpg",
+          "release_date": "1984-12-21",
+          "title": "The Ewok Adventure",
+          "video": false,
+          "vote_average": 5.9,
+          "vote_count": 401
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/aJCtkxLLzkk1pECehVjKHA2lBgw.jpg",
+          "genre_ids": [
+            12,
+            28,
+            878
+          ],
+          "id": 1891,
+          "original_language": "en",
+          "original_title": "The Empire Strikes Back",
+          "overview": "The epic saga continues as Luke Skywalker, in hopes of defeating the evil Galactic Empire, learns the ways of the Jedi from aging master Yoda. But Darth Vader is more determined than ever to capture Luke. Meanwhile, rebel leader Princess Leia, cocky Han Solo, Chewbacca, and droids C-3PO and R2-D2 are thrown into various stages of capture, betrayal and despair.",
+          "popularity": 8.1197,
+          "poster_path": "/nNAeTmF4CtdSgMDplXTDPOpYzsX.jpg",
+          "release_date": "1980-05-20",
+          "title": "The Empire Strikes Back",
+          "video": false,
+          "vote_average": 8.394,
+          "vote_count": 17880
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/r2IOBOeg5wLfLtyOnT5Pur6Tl4q.jpg",
+          "genre_ids": [
+            12,
+            28,
+            878
+          ],
+          "id": 1892,
+          "original_language": "en",
+          "original_title": "Return of the Jedi",
+          "overview": "Luke Skywalker leads a mission to rescue his friend Han Solo from the clutches of Jabba the Hutt, while the Emperor seeks to destroy the Rebellion once and for all with a second dreaded Death Star.",
+          "popularity": 7.3422,
+          "poster_path": "/jQYlydvHm3kUix1f8prMucrplhm.jpg",
+          "release_date": "1983-05-25",
+          "title": "Return of the Jedi",
+          "video": false,
+          "vote_average": 7.9,
+          "vote_count": 16483
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/msYmRFJfXy0zsFd73PAEqdetKpO.jpg",
+          "genre_ids": [
+            12,
+            28,
+            878
+          ],
+          "id": 1894,
+          "original_language": "en",
+          "original_title": "Star Wars: Episode II - Attack of the Clones",
+          "overview": "Following an assassination attempt on Senator Padmé Amidala, Jedi Knights Anakin Skywalker and Obi-Wan Kenobi investigate a mysterious plot that could change the galaxy forever.",
+          "popularity": 6.6944,
+          "poster_path": "/oZNPzxqM2s5DyVWab09NTQScDQt.jpg",
+          "release_date": "2002-05-15",
+          "title": "Star Wars: Episode II - Attack of the Clones",
+          "video": false,
+          "vote_average": 6.585,
+          "vote_count": 13948
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/5PfHGXosySGs0l1JfeREspy3v6G.jpg",
+          "genre_ids": [
+            878,
+            28,
+            12
+          ],
+          "id": 1924,
+          "original_language": "en",
+          "original_title": "Superman",
+          "overview": "Mild-mannered Clark Kent works as a reporter at the Daily Planet alongside his crush, Lois Lane. Clark must summon his superhero alter-ego when the nefarious Lex Luthor launches a plan to take over the world.",
+          "popularity": 10.0774,
+          "poster_path": "/d7px1FQxW4tngdACVRsCSaZq0Xl.jpg",
+          "release_date": "1978-12-14",
+          "title": "Superman",
+          "video": false,
+          "vote_average": 7.15,
+          "vote_count": 4121
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/8vQBXqDbb30qNpBcNYwTesSg75.jpg",
+          "genre_ids": [
+            878,
+            12,
+            28
+          ],
+          "id": 1927,
+          "original_language": "en",
+          "original_title": "Hulk",
+          "overview": "Bruce Banner, a genetics researcher with a tragic past, suffers massive radiation exposure in his laboratory that causes him to transform into a raging green monster when he gets angry.",
+          "popularity": 8.9828,
+          "poster_path": "/UllIft2jLSBaay3zQyMV4GNdfy.jpg",
+          "release_date": "2003-06-19",
+          "title": "Hulk",
+          "video": false,
+          "vote_average": 5.575,
+          "vote_count": 6103
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/HVcza6tJtWFrLriuh3Ano4Vt46.jpg",
+          "genre_ids": [
+            28,
+            12,
+            878
+          ],
+          "id": 1930,
+          "original_language": "en",
+          "original_title": "The Amazing Spider-Man",
+          "overview": "Peter Parker is an outcast high schooler abandoned by his parents as a boy, leaving him to be raised by his Uncle Ben and Aunt May. Like most teenagers, Peter is trying to figure out who he is and how he got to be the person he is today. As Peter discovers a mysterious briefcase that belonged to his father, he begins a quest to understand his parents' disappearance – leading him directly to Oscorp and the lab of Dr. Curt Connors, his father's former partner. As Spider-Man is set on a collision course with Connors' alter ego, The Lizard, Peter will make life-altering choices to use his powers and shape his destiny to become a hero.",
+          "popularity": 13.4588,
+          "poster_path": "/jexoNYnPd6vVrmygwF6QZmWPFdu.jpg",
+          "release_date": "2012-06-23",
+          "title": "The Amazing Spider-Man",
+          "video": false,
+          "vote_average": 6.723,
+          "vote_count": 18090
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/8JPz1636hMcaADngF4H4KOxXfp1.jpg",
+          "genre_ids": [
+            28,
+            53,
+            80
+          ],
+          "id": 1948,
+          "original_language": "en",
+          "original_title": "Crank",
+          "overview": "Chev Chelios, a hit man wanting to go straight, lets his latest target slip away. Then he awakes the next morning to a phone call that informs him he has been poisoned and has only an hour to live unless he keeps adrenaline coursing through his body while he searches for an antidote.",
+          "popularity": 5.0554,
+          "poster_path": "/rsKmhnvzJezjwC1Ud2Hh37oNpdQ.jpg",
+          "release_date": "2006-08-31",
+          "title": "Crank",
+          "video": false,
+          "vote_average": 6.647,
+          "vote_count": 4049
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/kJaRWmy1BGq3pHyE94LOTteiHer.jpg",
+          "genre_ids": [
+            28,
+            18,
+            9648,
+            53
+          ],
+          "id": 2501,
+          "original_language": "en",
+          "original_title": "The Bourne Identity",
+          "overview": "Wounded to the brink of death and suffering from amnesia, Jason Bourne is rescued at sea by a fisherman. With nothing to go on but a Swiss bank account number, he starts to reconstruct his life, but finds that many people he encounters want him dead. However, Bourne realizes that he has the combat and mental skills of a world-class spy—but who does he work for?",
+          "popularity": 8.6483,
+          "poster_path": "/aP8swke3gmowbkfZ6lmNidu0y9p.jpg",
+          "release_date": "2002-06-14",
+          "title": "The Bourne Identity",
+          "video": false,
+          "vote_average": 7.471,
+          "vote_count": 9764
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/qiBILuWhv7ipF0pxiEqIJdkQzj8.jpg",
+          "genre_ids": [
+            28,
+            18,
+            9648,
+            53
+          ],
+          "id": 2503,
+          "original_language": "en",
+          "original_title": "The Bourne Ultimatum",
+          "overview": "Bourne is brought out of hiding once again by reporter Simon Ross who is trying to unveil Operation Blackbriar, an upgrade to Project Treadstone, in a series of newspaper columns. Information from the reporter stirs a new set of memories, and Bourne must finally uncover his dark past while dodging The Company's best efforts to eradicate him.",
+          "popularity": 7.2097,
+          "poster_path": "/15rMz5MRXFp7CP4VxhjYw4y0FUn.jpg",
+          "release_date": "2007-08-03",
+          "title": "The Bourne Ultimatum",
+          "video": false,
+          "vote_average": 7.434,
+          "vote_count": 8095
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/4f8JBqvWyPObKTrjvJnp9BeOUyY.jpg",
+          "genre_ids": [
+            35
+          ],
+          "id": 2609,
+          "original_language": "en",
+          "original_title": "Planes, Trains and Automobiles",
+          "overview": "An irritable marketing executive, Neal Page, is heading home to Chicago for Thanksgiving when a number of delays force him to travel with a well meaning but overbearing shower curtain ring salesman, Del Griffith.",
+          "popularity": 4.2947,
+          "poster_path": "/fwi2cET87xArJCb8MdbWq2BZO3n.jpg",
+          "release_date": "1987-11-26",
+          "title": "Planes, Trains and Automobiles",
+          "video": false,
+          "vote_average": 7.2,
+          "vote_count": 2099
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/fey7Bj8CULtpAeuF76O17txzJ3z.jpg",
+          "genre_ids": [
+            14,
+            35,
+            878,
+            10749
+          ],
+          "id": 2612,
+          "original_language": "en",
+          "original_title": "Mr. Destiny",
+          "overview": "Larry Burrows is unhappy and feels powerless over his life. He believes his entire life could have turned out differently had he not missed that shot in a baseball game when was a kid. One night he meets this mysterious man, who could change his fate by offering him that alternative life he always dreamed of. But as Burrows embarks on this journey of self discovery he realises that even this new life has its problems and drawbacks..",
+          "popularity": 2.3586,
+          "poster_path": "/zlYxDFP9l1YcUnspNzuIa8KVo4N.jpg",
+          "release_date": "1990-10-12",
+          "title": "Mr. Destiny",
+          "video": false,
+          "vote_average": 6.228,
+          "vote_count": 219
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/mpEc2EPp6aJt3omHxw5IMZTDjt3.jpg",
+          "genre_ids": [
+            35,
+            18,
+            10751
+          ],
+          "id": 2616,
+          "original_language": "en",
+          "original_title": "Uncle Buck",
+          "overview": "Buck Russell, a lovable but slovenly bachelor, suddenly becomes the temporary caretaker of his nephew and nieces after a family emergency. His freewheeling attitude soon causes tension with his older niece Tia, loyal girlfriend Chanice and just about everyone else who crosses his path.",
+          "popularity": 6.1455,
+          "poster_path": "/euWPWqpujKQg2KnfBUVkBSZ6kf4.jpg",
+          "release_date": "1989-08-16",
+          "title": "Uncle Buck",
+          "video": false,
+          "vote_average": 6.796,
+          "vote_count": 1280
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/owRq5hVmyLv8pNx3Kn1dmE6AQOm.jpg",
+          "genre_ids": [
+            10749,
+            35
+          ],
+          "id": 2642,
+          "original_language": "en",
+          "original_title": "Two Weeks Notice",
+          "overview": "Dedicated environmental lawyer Lucy Kelson goes to work for billionaire George Wade as part of a deal to preserve a community center. Indecisive and weak-willed George grows dependent on Lucy's guidance on everything from legal matters to clothing. Exasperated, Lucy gives notice and picks Harvard graduate June Carter as her replacement. As Lucy's time at the firm nears an end, she grows jealous of June and has second thoughts about leaving George.",
+          "popularity": 2.8201,
+          "poster_path": "/r18hSGAcxWiUysbX6nFShIZyjjP.jpg",
+          "release_date": "2002-12-19",
+          "title": "Two Weeks Notice",
+          "video": false,
+          "vote_average": 6.364,
+          "vote_count": 2143
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/s2JJkEcVz1Q4uLnNhWZwCcBjqMr.jpg",
+          "genre_ids": [
+            28,
+            35,
+            80
+          ],
+          "id": 2661,
+          "original_language": "en",
+          "original_title": "Batman",
+          "overview": "The Dynamic Duo faces four super-villains who plan to hold the world for ransom with the help of a secret invention that instantly dehydrates people.",
+          "popularity": 2.7078,
+          "poster_path": "/zzoPxWHnPa0eyfkMLgwbNvdEcVF.jpg",
+          "release_date": "1966-07-30",
+          "title": "Batman",
+          "video": false,
+          "vote_average": 6.405,
+          "vote_count": 1010
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/nZCuAonAbL1mXea0NITbxfnLvVQ.jpg",
+          "genre_ids": [
+            35
+          ],
+          "id": 2665,
+          "original_language": "en",
+          "original_title": "Airplane II: The Sequel",
+          "overview": "A faulty computer causes a passenger space shuttle to head straight for the sun, and man-with-a-past Ted Striker must save the day and get the shuttle back on track – again – all the while trying to patch up his relationship with Elaine.",
+          "popularity": 2.813,
+          "poster_path": "/zs7Pjyabt0fwe2XqIx0gnF9Q4np.jpg",
+          "release_date": "1982-12-10",
+          "title": "Airplane II: The Sequel",
+          "video": false,
+          "vote_average": 6.088,
+          "vote_count": 1207
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/yVwCXQzSZvg9H0YBXvzPfSs6Vqx.jpg",
+          "genre_ids": [
+            14,
+            35,
+            10751
+          ],
+          "id": 2698,
+          "original_language": "en",
+          "original_title": "Evan Almighty",
+          "overview": "God contacts Junior Congressman Evan Baxter and tells him to build an ark in preparation for a great flood.",
+          "popularity": 4.8405,
+          "poster_path": "/blI1ioXbgJWOJ3PbcBuSV65Ebwu.jpg",
+          "release_date": "2007-06-09",
+          "title": "Evan Almighty",
+          "video": false,
+          "vote_average": 5.587,
+          "vote_count": 4462
+        }
+      ],
+      "total_pages": 11298,
+      "total_results": 225943
+    },
+    "recommendations": {
+      "page": 1,
+      "results": [
+        {
+          "adult": false,
+          "backdrop_path": "/7WJjFviFBffEJvkAms4uWwbcVUk.jpg",
+          "id": 451048,
+          "title": "Jungle Cruise",
+          "original_title": "Jungle Cruise",
+          "overview": "Dr. Lily Houghton enlists the aid of wisecracking skipper Frank Wolff to take her down the Amazon in his dilapidated boat. Together, they search for an ancient tree that holds the power to heal – a discovery that will change the future of medicine.",
+          "poster_path": "/3UPz63cGsAQlYQnkOHfAbUhl1O3.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            14,
+            12,
+            10751,
+            28,
+            35
+          ],
+          "popularity": 10.8098,
+          "release_date": "2021-07-28",
+          "video": false,
+          "vote_average": 7.318,
+          "vote_count": 5988
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/dq18nCTTLpy9PmtzZI6Y2yAgdw5.jpg",
+          "id": 497698,
+          "title": "Black Widow",
+          "original_title": "Black Widow",
+          "overview": "Natasha Romanoff, also known as Black Widow, confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Pursued by a force that will stop at nothing to bring her down, Natasha must deal with her history as a spy and the broken relationships left in her wake long before she became an Avenger.",
+          "poster_path": "/7JPpIjhD2V0sKyFvhB9khUMa30d.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            28,
+            12,
+            878
+          ],
+          "popularity": 9.708,
+          "release_date": "2021-07-07",
+          "video": false,
+          "vote_average": 7.186,
+          "vote_count": 10888
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/7py8kUCYaOdFn1TfVS87BDBySOz.jpg",
+          "id": 550988,
+          "title": "Free Guy",
+          "original_title": "Free Guy",
+          "overview": "A bank teller discovers he is actually a background player in an open-world video game, and decides to become the hero of his own story. Now, in a world where there are no limits, he is determined to be the guy who saves his world his way before it's too late.",
+          "poster_path": "/6PFJrMvoQwBxQITLYHj09VeJ37q.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            12,
+            878
+          ],
+          "popularity": 11.2552,
+          "release_date": "2021-08-11",
+          "video": false,
+          "vote_average": 7.463,
+          "vote_count": 9432
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/fZ4hrFacm5yow9gT64rS6YMNyHz.jpg",
+          "id": 729720,
+          "title": "The Last Mercenary",
+          "original_title": "Le Dernier Mercenaire",
+          "overview": "A legendary secret service agent comes out of hiding and returns to France to help the son he's never met get out of trouble.",
+          "poster_path": "/ttpKJ7XQxDZV252KNEHXtykYT41.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            28,
+            35
+          ],
+          "popularity": 2.2947,
+          "release_date": "2021-07-30",
+          "video": false,
+          "vote_average": 6.39,
+          "vote_count": 648
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/xXHZeb1yhJvnSHPzZDqee0zfMb6.jpg",
+          "id": 385128,
+          "title": "F9",
+          "original_title": "F9",
+          "overview": "Dominic Toretto and his crew battle the most skilled assassin and high-performance driver they've ever encountered: his forsaken brother.",
+          "poster_path": "/deEmLILTPejEb6OGsXRJ5MCvyDW.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            28,
+            12,
+            80
+          ],
+          "popularity": 8.3634,
+          "release_date": "2021-05-19",
+          "video": false,
+          "vote_average": 7.026,
+          "vote_count": 7529
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/61MrK5U4w4MVL1vfwoG12zYPJ8B.jpg",
+          "id": 615457,
+          "title": "Nobody",
+          "original_title": "Nobody",
+          "overview": "Hutch Mansell, a suburban dad, overlooked husband, nothing neighbor — a \"nobody.\" When two thieves break into his home one night, Hutch's unknown long-simmering rage is ignited and propels him on a brutal path that will uncover dark secrets he fought to leave behind.",
+          "poster_path": "/oBgWY00bEFeZ9N25wWVyuQddbAo.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            28,
+            53
+          ],
+          "popularity": 13.24,
+          "release_date": "2021-03-18",
+          "video": false,
+          "vote_average": 7.898,
+          "vote_count": 7924
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/kIQc0kkqIYTo65x5XjlKgqdDQ6a.jpg",
+          "id": 559907,
+          "title": "The Green Knight",
+          "original_title": "The Green Knight",
+          "overview": "An epic fantasy adventure based on the timeless Arthurian legend, The Green Knight tells the story of Sir Gawain, King Arthur's reckless and headstrong nephew, who embarks on a daring quest to confront the eponymous Green Knight, a gigantic emerald-skinned stranger and tester of men.",
+          "poster_path": "/if4hw3Ou5Sav9Em7WWHj66mnywp.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            12,
+            18,
+            14
+          ],
+          "popularity": 5.0967,
+          "release_date": "2021-07-29",
+          "video": false,
+          "vote_average": 6.606,
+          "vote_count": 2080
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/wAk0yKrhAmvsoMvlKs4QImhvK5X.jpg",
+          "id": 297761,
+          "title": "Suicide Squad",
+          "original_title": "Suicide Squad",
+          "overview": "From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government, undertaking high-risk black ops missions in exchange for commuted prison sentences.",
+          "poster_path": "/sk3FZgh3sRrmr8vyhaitNobMcfh.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            28,
+            12,
+            14
+          ],
+          "popularity": 11.5766,
+          "release_date": "2016-08-03",
+          "video": false,
+          "vote_average": 5.919,
+          "vote_count": 21747
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/8yhWlFcJ8zCqjfCvLy3lWFuawR1.jpg",
+          "id": 579047,
+          "title": "Reminiscence",
+          "original_title": "Reminiscence",
+          "overview": "Nicolas Bannister, a rugged and solitary veteran living in a near-future Miami flooded by rising seas, is an expert in a dangerous occupation: he offers clients the chance to relive any memory they desire. His life changes when he meets a mysterious young woman named Mae. What begins as a simple matter of lost and found becomes a passionate love affair. But when a different client's memories implicate Mae in a series of violent crimes, Bannister must delve through the dark world of the past to uncover the truth about the woman he fell for.",
+          "poster_path": "/17siH6wJRQ2jZiqz9BWUhy1UtZ.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            9648,
+            878
+          ],
+          "popularity": 2.8559,
+          "release_date": "2021-08-18",
+          "video": false,
+          "vote_average": 6.539,
+          "vote_count": 1884
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/wawIfsBlzgZYtHrBn8RUtGIZTgF.jpg",
+          "id": 675445,
+          "title": "PAW Patrol: The Movie",
+          "original_title": "PAW Patrol: The Movie",
+          "overview": "Ryder and the pups are called to Adventure City to stop Mayor Humdinger from turning the bustling metropolis into a state of chaos.",
+          "poster_path": "/jXavWyam2VPR6bOhLwwuP3K2Hw4.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            10751,
+            35,
+            12,
+            16
+          ],
+          "popularity": 5.5202,
+          "release_date": "2021-08-09",
+          "video": false,
+          "vote_average": 7.341,
+          "vote_count": 1250
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/2OFg5p9yarI5zZsUWKCRgBgPctj.jpg",
+          "id": 568620,
+          "title": "Snake Eyes: G.I. Joe Origins",
+          "original_title": "Snake Eyes: G.I. Joe Origins",
+          "overview": "After saving the life of their heir apparent, tenacious loner Snake Eyes is welcomed into an ancient Japanese clan called the Arashikage where he is taught the ways of the ninja warrior. But, when secrets from his past are revealed, Snake Eyes' honor and allegiance will be tested – even if that means losing the trust of those closest to him.",
+          "poster_path": "/uIXF0sQGXOxQhbaEaKOi2VYlIL0.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            28,
+            12
+          ],
+          "popularity": 8.644,
+          "release_date": "2021-07-22",
+          "video": false,
+          "vote_average": 6.5,
+          "vote_count": 1658
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/fJbWgOb9pSQXihM9m10bRvl2dJ8.jpg",
+          "id": 566525,
+          "title": "Shang-Chi and the Legend of the Ten Rings",
+          "original_title": "Shang-Chi and the Legend of the Ten Rings",
+          "overview": "Shang-Chi must confront the past he thought he left behind when he is drawn into the web of the mysterious Ten Rings organization.",
+          "poster_path": "/d08HqqeBQSwN8i8MEvpsZ8Cb438.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            28,
+            12,
+            14
+          ],
+          "popularity": 15.408,
+          "release_date": "2021-09-01",
+          "video": false,
+          "vote_average": 7.5,
+          "vote_count": 10064
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/bjIPzixuWnOzxDG25WaXKuy9lYZ.jpg",
+          "id": 522931,
+          "title": "Hitman's Wife's Bodyguard",
+          "original_title": "Hitman's Wife's Bodyguard",
+          "overview": "The world’s most lethal odd couple – bodyguard Michael Bryce and hitman Darius Kincaid – are back on another life-threatening mission. Still unlicensed and under scrutiny, Bryce is forced into action by Darius's even more volatile wife, the infamous international con artist Sonia Kincaid. As Bryce is driven over the edge by his two most dangerous protectees, the trio get in over their heads in a global plot and soon find that they are all that stand between Europe and a vengeful and powerful madman.",
+          "poster_path": "/6zwGWDpY8Zu0L6W4SYWERBR8Msw.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            28,
+            35,
+            80,
+            53
+          ],
+          "popularity": 3.8586,
+          "release_date": "2021-06-14",
+          "video": false,
+          "vote_average": 6.665,
+          "vote_count": 2470
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/oOZM1C3wZtsZtdidVgEazeas7U4.jpg",
+          "id": 727745,
+          "title": "The Kissing Booth 3",
+          "original_title": "The Kissing Booth 3",
+          "overview": "It’s the summer before Elle heads to college, and she has a secret decision to make. Elle has been accepted into Harvard, where boyfriend Noah is matriculating, and also Berkeley, where her BFF Lee is headed and has to decide if she should stay or not.",
+          "poster_path": "/c7xcqnMDVQ5v1hJBm3AZ5YikNe6.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            10749,
+            35
+          ],
+          "popularity": 5.2481,
+          "release_date": "2021-08-11",
+          "video": false,
+          "vote_average": 6.865,
+          "vote_count": 1982
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/7ZiMrbitgbyio4eOzFKRruPKu5G.jpg",
+          "id": 593910,
+          "title": "Cinderella",
+          "original_title": "Cinderella",
+          "overview": "Cinderella, an orphaned girl with an evil stepmother, has big dreams and with the help of her Fabulous Godmother, she perseveres to make them come true.",
+          "poster_path": "/clDFqATL4zcE7LzUwkrVj3zHvk7.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            14,
+            10749,
+            35
+          ],
+          "popularity": 6.3223,
+          "release_date": "2021-09-03",
+          "video": false,
+          "vote_average": 6.337,
+          "vote_count": 1445
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/e6DlxuwzeZozu6D3h636gyDAHLo.jpg",
+          "id": 449406,
+          "title": "Vivo",
+          "original_title": "Vivo",
+          "overview": "A music-loving kinkajou named Vivo embarks on the journey of a lifetime to fulfill his destiny and deliver a love song for an old friend.",
+          "poster_path": "/eRLlrhbdYE7XN6VtcZKy6o2BsOw.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16,
+            10751,
+            35
+          ],
+          "popularity": 6.4051,
+          "release_date": "2021-07-30",
+          "video": false,
+          "vote_average": 7.3,
+          "vote_count": 739
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/32yqxyLlWcO81UCx51Jfq9aeJdA.jpg",
+          "id": 631843,
+          "title": "Old",
+          "original_title": "Old",
+          "overview": "A group of families on a tropical holiday discover that the secluded beach where they are staying is somehow causing them to age rapidly – reducing their entire lives into a single day.",
+          "poster_path": "/vclShucpUmPhdAOmKgf3B3Z4POD.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            53,
+            9648,
+            27
+          ],
+          "popularity": 5.0393,
+          "release_date": "2021-07-21",
+          "video": false,
+          "vote_average": 6.324,
+          "vote_count": 4730
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/3ULzK4XTSC1wal11K7459fxnjjA.jpg",
+          "id": 482373,
+          "title": "Don't Breathe 2",
+          "original_title": "Don't Breathe 2",
+          "overview": "The Blind Man has been hiding out for several years in an isolated cabin and has taken in and raised a young girl orphaned from a devastating house fire. Their quiet life together is shattered when a group of criminals kidnap the girl, forcing the Blind Man to leave his safe haven to save her.",
+          "poster_path": "/aOu6PJVO9RyGAzdUwG6fupu0gpz.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            53,
+            27
+          ],
+          "popularity": 7.9412,
+          "release_date": "2021-08-12",
+          "video": false,
+          "vote_average": 7.019,
+          "vote_count": 2733
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/rcUcYzGGicDvhDs58uM44tJKB9F.jpg",
+          "id": 527774,
+          "title": "Raya and the Last Dragon",
+          "original_title": "Raya and the Last Dragon",
+          "overview": "Long ago, in the fantasy world of Kumandra, humans and dragons lived together in harmony. But when an evil force threatened the land, the dragons sacrificed themselves to save humanity. Now, 500 years later, that same evil has returned and it’s up to a lone warrior, Raya, to track down the legendary last dragon to restore the fractured land and its divided people.",
+          "poster_path": "/5nVhgCzxKbK47OLIKxCR1syulOn.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16,
+            10751,
+            14,
+            28,
+            12
+          ],
+          "popularity": 6.9025,
+          "release_date": "2021-03-03",
+          "video": false,
+          "vote_average": 7.814,
+          "vote_count": 7109
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/orGlr1vHTgbDkGJPwuBjd8ncVjQ.jpg",
+          "id": 666243,
+          "title": "The Witcher: Nightmare of the Wolf",
+          "original_title": "The Witcher: Nightmare of the Wolf",
+          "overview": "Escaping from poverty to become a witcher, Vesemir slays monsters for coin and glory, but when a new menace rises, he must face the demons of his past.",
+          "poster_path": "/ckjlfMg2lXQK5aav33BCBgtsYWh.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16,
+            28,
+            14
+          ],
+          "popularity": 3.3353,
+          "release_date": "2021-08-22",
+          "video": false,
+          "vote_average": 7.442,
+          "vote_count": 1044
+        }
+      ],
+      "total_pages": 2,
+      "total_results": 40
+    }
+  }

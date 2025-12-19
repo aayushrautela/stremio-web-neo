@@ -9,7 +9,7 @@ const { default: Icon } = require('@stremio/stremio-icons/react');
 const styles = require('./styles');
 const { t } = require('i18next');
 
-const HeroShelf = ({ items }) => {
+const HeroShelf = ({ items, isLoading }) => {
     const [currentIndex, setCurrentIndex] = React.useState(0);
     const interval = useInterval(15000); // 15 seconds
 
@@ -18,15 +18,18 @@ const HeroShelf = ({ items }) => {
             return [];
         }
         // Filter items that have both background and logo
-        return items
-            .filter((item) =>
-                item &&
-                typeof item.background === 'string' &&
-                item.background.length > 0 &&
-                typeof item.logo === 'string' &&
-                item.logo.length > 0
-            );
-    }, [items]);
+        // If loading, wait for metadata to be fetched before filtering
+        const filtered = items.filter((item) =>
+            item &&
+            typeof item.background === 'string' &&
+            item.background.length > 0 &&
+            typeof item.logo === 'string' &&
+            item.logo.length > 0
+        );
+        // If we're loading and have no items yet, return empty array to show placeholder
+        // Otherwise return filtered items (which may be empty if still loading)
+        return filtered;
+    }, [items, isLoading]);
 
     const nextSlide = React.useCallback(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % heroItems.length);
@@ -35,6 +38,13 @@ const HeroShelf = ({ items }) => {
     const prevSlide = React.useCallback(() => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + heroItems.length) % heroItems.length);
     }, [heroItems.length]);
+
+    // Reset currentIndex when heroItems changes (e.g., when metadata loads)
+    React.useEffect(() => {
+        if (heroItems.length > 0 && currentIndex >= heroItems.length) {
+            setCurrentIndex(0);
+        }
+    }, [heroItems.length, currentIndex]);
 
     React.useEffect(() => {
         if (heroItems.length > 1) {
@@ -94,7 +104,35 @@ const HeroShelf = ({ items }) => {
     }
 
     if (heroItems.length === 0) {
-        // No hero items found (either still loading or none match criteria)
+        // No hero items found - show placeholder if loading, otherwise return null
+        if (isLoading && Array.isArray(items) && items.length > 0) {
+            return (
+                <div className={styles['hero-shelf-container']}>
+                    <div className={styles['hero-shelf-wrapper']}>
+                        <div className={styles['hero-placeholder']}>
+                            <div className={styles['placeholder-background']} />
+                            <div className={styles['placeholder-content']}>
+                                <div className={styles['placeholder-logo']} />
+                                <div className={styles['placeholder-metadata']}>
+                                    <div className={styles['placeholder-badge']} />
+                                    <div className={styles['placeholder-text']} />
+                                </div>
+                                <div className={styles['placeholder-description']}>
+                                    <div className={styles['placeholder-line']} />
+                                    <div className={styles['placeholder-line']} />
+                                    <div className={styles['placeholder-line']} />
+                                </div>
+                                <div className={styles['placeholder-buttons']}>
+                                    <div className={styles['placeholder-button']} />
+                                    <div className={styles['placeholder-button']} />
+                                    <div className={styles['placeholder-button']} />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
         return null;
     }
 
@@ -176,6 +214,25 @@ const HeroShelf = ({ items }) => {
                                         </>
                                     )}
                                 </div>
+                                {(year || runtime) && (
+                                    <div className={styles['year-row']}>
+                                        {year && <div className={styles['year-item']}>{year}</div>}
+                                        {runtime && (
+                                            <>
+                                                <div className={styles['metadata-separator']}>•</div>
+                                                <div className={styles['year-item']}>{runtime}</div>
+                                            </>
+                                        )}
+                                    </div>
+                                )}
+                                {imdbRating && (
+                                    <div className={styles['rating-row']}>
+                                        <div className={styles['badge-imdb']}>
+                                            <span className={styles['imdb-label']}>{t('IMDB')}</span>
+                                            <span className={styles['imdb-rating']}>{imdbRating}</span>
+                                        </div>
+                                    </div>
+                                )}
                                 {description && (
                                     <div className={styles['description']}>
                                         {description}
