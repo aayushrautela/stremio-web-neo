@@ -43,7 +43,7 @@ const MetaPreview = React.forwardRef(({ className, compact, name, logo, backgrou
                 .reduce((linksGroups, { category, name, url }) => {
                     const { protocol, path, pathname, hostname } = UrlUtils.parse(url);
                     if (category === CONSTANTS.IMDB_LINK_CATEGORY) {
-                        if (hostname === 'imdb.com') {
+                        if (hostname === 'imdb.com' || hostname === 'www.imdb.com') {
                             linksGroups.set(category, {
                                 label: name,
                                 href: `https://www.stremio.com/warning#${encodeURIComponent(url)}`
@@ -141,13 +141,16 @@ const MetaPreview = React.forwardRef(({ className, compact, name, logo, backgrou
         return null;
     }, [releaseInfo, released]);
     
-    // Extract IMDb rating
-    const imdbRating = React.useMemo(() => {
+    // Extract IMDb link info (rating and href)
+    const imdbLink = React.useMemo(() => {
         if (linksGroups.has(CONSTANTS.IMDB_LINK_CATEGORY)) {
-            const imdbLink = linksGroups.get(CONSTANTS.IMDB_LINK_CATEGORY);
+            const link = linksGroups.get(CONSTANTS.IMDB_LINK_CATEGORY);
             // Extract rating from label (e.g., "8.8" from "IMDb 8.8" or just "8.8")
-            const ratingMatch = imdbLink.label.match(/(\d+\.?\d*)/);
-            return ratingMatch ? ratingMatch[1] : null;
+            const ratingMatch = link.label.match(/(\d+\.?\d*)/);
+            return {
+                rating: ratingMatch ? ratingMatch[1] : null,
+                href: link.href
+            };
         }
         return null;
     }, [linksGroups]);
@@ -278,12 +281,17 @@ const MetaPreview = React.forwardRef(({ className, compact, name, logo, backgrou
                 </div>
                 
                 {/* IMDb Rating on its own line */}
-                {imdbRating && (
+                {imdbLink?.rating && (
                     <div className={styles['imdb-rating-row']}>
-                        <div className={styles['badge-imdb']}>
+                        <Button
+                            className={styles['badge-imdb']}
+                            href={imdbLink.href}
+                            target="_blank"
+                            title={t('IMDB')}
+                        >
                             <span className={styles['imdb-label']}>{t('IMDB')}</span>
-                            <span className={styles['imdb-rating']}>{imdbRating}</span>
-                        </div>
+                            <span className={styles['imdb-rating']}>{imdbLink.rating}</span>
+                        </Button>
                     </div>
                 )}
                 

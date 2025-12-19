@@ -151,7 +151,9 @@ const HeroShelf = ({ items, isLoading }) => {
                 )}
                 {heroItems.map((item, index) => {
                     const isActive = index === currentIndex;
-                    const imdbRating = item.links?.find(l => l.category === 'imdb')?.name;
+                    const imdbLinkData = item.links?.find(l => l.category === 'imdb');
+                    const imdbRating = imdbLinkData?.name;
+                    const imdbHref = imdbLinkData?.url ? `https://www.stremio.com/warning#${encodeURIComponent(imdbLinkData.url)}` : null;
                     const year = item.releaseInfo;
                     const runtime = item.runtime;
                     const description = item.description;
@@ -191,6 +193,26 @@ const HeroShelf = ({ items, isLoading }) => {
                                         alt={item.name || ''}
                                         renderFallback={renderLogoFallback}
                                     />
+                                </div>
+                                <div className={styles['metadata-row']}>
+                                    {imdbRating && (
+                                        <Button
+                                            className={styles['badge-imdb']}
+                                            href={imdbHref}
+                                            target="_blank"
+                                            title={t('IMDB')}
+                                        >
+                                            <span className={styles['imdb-label']}>{t('IMDB')}</span>
+                                            <span className={styles['imdb-rating']}>{imdbRating}</span>
+                                        </Button>
+                                    )}
+                                    {year && <div className={styles['metadata-item']}>{year}</div>}
+                                    {runtime && (
+                                        <>
+                                            <div className={styles['metadata-separator']}>•</div>
+                                            <div className={styles['metadata-item']}>{runtime}</div>
+                                        </>
+                                    )}
                                 </div>
                                 {(year || runtime) && (
                                     <div className={styles['year-row']}>
